@@ -1,0 +1,20 @@
+.help-card{
+    display:flex;
+    margin:0 12rem;
+    padding: 3rem;
+    background-color: #071E22;
+    color:#F4C095;
+    box-shadow: 0px 0px 20px -2px #646464;
+
+}
+.title-help{
+    font-size:32px;
+    margin-top:15px;
+    padding-right: 40px;
+}
+hr{
+    color: #F4C095;
+}
+p{
+    padding-left: 5px;
+}

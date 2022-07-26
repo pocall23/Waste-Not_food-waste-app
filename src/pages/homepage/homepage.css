@@ -1,0 +1,7 @@
+.main{
+    display:flex;
+    flex-direction: column;
+    background: url('../../../public/assets/images/stockfood.jpg') ;
+   background-repeat: none;
+   background-size: cover;
+}

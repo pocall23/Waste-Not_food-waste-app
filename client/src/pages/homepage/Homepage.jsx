@@ -10,14 +10,15 @@ export default function Homepage() {
   return (
     <>
 
-              <Header />
-              <div className="main">
-                <About />
-                <Help />
-                <SignUp/>
-              </div>
+      <Header />
+      <div className="main">
+        <About />
+        <Help />
+        <SignUp/>
+      </div>
             
 
     </>
   )
 }
+

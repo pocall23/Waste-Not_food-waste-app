@@ -1,0 +1,15 @@
+[
+  {
+    "name": "Can tomatoes",
+    "description": "Tomatoes in juice",
+    "image": "../../../client/public/assets/images/Can_Tomatoes.png",
+    "servings": 3,
+    "ingredients": ["Diced tomatoes", "tomato juice"]
+  },
+  {
+    "name": "Spagetti Bolognese",
+    "description": "Homemade Spagetti Bolognese",
+    "image": "../../../client/public/assets/images/Spagetti_Bolognese.png",
+    "ingredients": ["Mince", "Olive Oil", "Onion", "Garlic", "Can Tomatoes", "Tomato Paste", "Salt", "Basil", "Oregano", "Tabasco"]
+  }
+]

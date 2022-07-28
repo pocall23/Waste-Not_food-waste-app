@@ -6,8 +6,8 @@ type Food {
   name: String!
   description: String!
   image: String
-  ingredients: String
-  expiry: String
+  ingredients: [String]
+
 }
 
 type Query {

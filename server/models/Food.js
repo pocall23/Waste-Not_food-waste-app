@@ -9,13 +9,19 @@ const foodSchema = new Schema({
     type: String,
     required: true,
   },
+  servings:{
+    type: Number,
+    default: 1
+  },
   image: {
     type: String,
   },
-  ingredients: {
-    type: String,
-    required: true,
-  },
+  ingredients: [
+    {
+      type: String,
+      required: true,
+    },
+  ],
   expiry:{
     type: Date,
     default: Date.now,

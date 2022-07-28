@@ -4,8 +4,9 @@ import { ApolloClient, ApolloProvider, InMemoryCache, } from '@apollo/client';
 // import { createHttpLink } from '@apollo/client'
 // import { setContext } from '@apollo/client/link/context';
 
-import Homepage from "../src/pages/homepage/Homepage"
-import Header from "../src/components/header/header"
+// import Homepage from "../src/pages/homepage/Homepage"
+// import Home from "../src/pages/home/Home"
+import AvaliableFoods from './pages/AvaliableFood/AvaliableFood';
 
 // const httpLink = createHttpLink({
 //   uri: 'http://localhost:3001/graphql',
@@ -39,8 +40,8 @@ function App() {
     <ApolloProvider client={client}>
       {/* <Router> */}
         <> 
-
-          <Homepage/>
+          
+          <AvaliableFoods/>
         </>
         
       {/* </Router> */}

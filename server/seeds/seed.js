@@ -5,11 +5,15 @@ const { Food } = require('../models');
 const foodData = require ('./foodData.json')
 
 db.once('open', async () => {
-await Food.deleteMany({})
+  try {
+    await Food.deleteMany({})
 
-const foods = await Food.insertMany(foodData);
+    const foods = await Food.insertMany(foodData);
 
-console.log('databased filled');
-process.exit(0);
+    console.log('databased filled');
+    process.exit(0);
+  } catch (err) {
+    throw err
+  }
 
 });

@@ -1,12 +1,13 @@
 import React from 'react';
-// import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ApolloClient, ApolloProvider, InMemoryCache, } from '@apollo/client';
 // import { createHttpLink } from '@apollo/client'
 // import { setContext } from '@apollo/client/link/context';
 
-// import Homepage from "../src/pages/homepage/Homepage"
 // import Home from "../src/pages/home/Home"
 import AvaliableFoods from './pages/AvaliableFood/AvaliableFood';
+import Header from './components/Header/Header';
+import Homepage from './pages/Homepage/Homepage';
 
 // const httpLink = createHttpLink({
 //   uri: 'http://localhost:3001/graphql',
@@ -38,13 +39,24 @@ const client = new ApolloClient({
 function App() {
   return (
     <ApolloProvider client={client}>
-      {/* <Router> */}
-        <> 
-          
-          <AvaliableFoods/>
-        </>
-        
-      {/* </Router> */}
+      <Router>
+        <div>
+            <Header/>
+            <div>
+              <Routes>
+                <Route
+                  path="/"
+                  element={<Homepage/>}>
+                </Route>
+                <Route
+                  path="/foods"
+                  element={<AvaliableFoods/>}>
+                  </Route>
+              </Routes>
+            </div>
+            {/* need a footer here */}
+        </div> 
+      </Router>
     </ApolloProvider>
   ) 
 }

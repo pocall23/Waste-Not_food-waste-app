@@ -1,12 +1,13 @@
 import "./signUp.css"
-
-
+import React from 'react'
+import { Link } from 'react-router-dom'
 
 
 export default function SignUp() {
+
   return (
     <>
-        <div className="button"><button>SIGN UP!</button></div>
-        </>
+      <Link className="button" to = {`/Foods`}><button>SIGN UP!</button></Link>
+    </>
   )
 }

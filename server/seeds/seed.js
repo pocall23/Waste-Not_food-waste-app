@@ -1,8 +1,10 @@
 const db = require('../config/connection');
 
-const { Food } = require('../models');
+const { Food, User } = require('../models');
 
-const foodData = require ('./foodData.json')
+const foodData = require ('./foodData.json');
+
+const userSeeds = require('./userSeeds.json')
 
 db.once('open', async () => {
   try {
@@ -17,3 +19,14 @@ db.once('open', async () => {
   }
 
 });
+
+db.once('open', async () => {
+  try {
+    await User.deleteOne({});
+    await User.create(userSeeds);
+
+    process.exit(0)
+  }catch (err){
+    throw err;
+  }
+})

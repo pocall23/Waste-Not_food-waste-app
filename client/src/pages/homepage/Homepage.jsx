@@ -1,10 +1,10 @@
 
 import About from "../../components/about/about"
-import Help from "../../components/help/help"
+import Help from "../../components/Help/help"
 import SignUp from "../../components/signUp/signUp"
 
 
-import './Homepage.css'
+import './homepage.css'
 
 export default function Homepage() {
   return (

@@ -12,6 +12,7 @@ type Food {
 
 type Query {
   foods:[Food]
+  singlefood(foodId: ID!): [Food]
 }
 `
 

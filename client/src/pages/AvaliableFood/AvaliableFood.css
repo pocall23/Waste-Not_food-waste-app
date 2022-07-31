@@ -1,0 +1,31 @@
+.container {
+  background-color:whitesmoke;
+  display: flex;
+}
+.foodlist {
+  flex: 1;
+  width: 80%;
+  margin: 5%;
+  
+
+}
+.foodform {
+  flex: 1;
+  width: 80%;
+  margin: 5%;
+
+}
+.donateheading {
+  text-align: center;
+}
+
+.form_button {
+  padding: 20px;
+  margin: 20px;
+  width: 200px;
+  background-image: radial-gradient(#269792, #1D7874);
+  border: #F4C095;
+  color:#F4C095;
+  font-size: 16px;
+  border-radius: 5px;
+}

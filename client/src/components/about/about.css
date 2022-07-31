@@ -1,6 +1,7 @@
 .about-card{
     display:flex;
-    margin:4rem 10rem;
+    width: 50%;
+    margin: 10% auto ;
     padding: 3rem;
     color:#F4C095;
     background-color: #071E22;
@@ -8,7 +9,11 @@
     box-shadow: 0px 0px 20px -2px #646464;
 }
 .title-about{
-    font-size:32px;
+    font-size:24px;
     margin-top:10px;
-    padding-right: 10px;
+    padding-right: 20px;
+}
+
+.about-info {
+
 }

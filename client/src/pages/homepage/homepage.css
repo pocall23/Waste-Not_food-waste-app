@@ -1,7 +1,8 @@
 .main {
     display:flex;
     flex-direction: column;
-    background: url('../../../public/images/stockfood.jpg') ;
+    background: url('../../../public/images/foodgeneral.jpg') ;
+    width: 100%;
    background-repeat: none;
    background-size: cover;
 }

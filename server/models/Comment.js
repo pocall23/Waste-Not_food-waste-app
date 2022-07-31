@@ -1,5 +1,5 @@
-const { Schema ,  model, Mongoose } = require('mongoose');
-const mongoose = require('mongoose')
+const { Schema , model, mongoose } = require('mongoose');
+// const mongoose = require('mongoose')
 
 const commentSchema = new mongoose.Schema({
     text: {

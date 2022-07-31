@@ -13,10 +13,16 @@ type Food {
 type Query {
   foods:[Food]
   singlefood(foodId: ID!): [Food]
+  user(id: ID!): User
+}
+
+type Auth {
+  token: ID!
+  user: User
 }
 
 type User {
-  _id : ID
+  _id : ID!
   name: String
   email: String
   password: String

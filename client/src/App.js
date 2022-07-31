@@ -6,8 +6,11 @@ import { ApolloClient, ApolloProvider, InMemoryCache, } from '@apollo/client';
 
 // import Home from "../src/pages/home/Home"
 import AvaliableFoods from './pages/AvaliableFood/AvaliableFood';
+
 import Header from './components/header/Header';
 import Homepage from './pages/homepage/Homepage';
+import SingleFood from './pages/SingleFood/SingleFood';
+
 
 // const httpLink = createHttpLink({
 //   uri: 'http://localhost:3001/graphql',
@@ -49,9 +52,13 @@ function App() {
                   element={<Homepage/>}>
                 </Route>
                 <Route
-                  path="/foods"
+                  path="/Foods"
                   element={<AvaliableFoods/>}>
-                  </Route>
+                </Route>
+                <Route
+                  path="/Food/:foodId"
+                  element={<SingleFood/>}>
+                </Route>
               </Routes>
             </div>
             {/* need a footer here */}

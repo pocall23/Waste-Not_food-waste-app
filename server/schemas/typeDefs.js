@@ -12,7 +12,11 @@ type Food {
 
 type Query {
   foods:[Food]
-  singlefood(foodId: ID!): [Food]
+  singleFood(foodId: ID!): Food
+}
+
+type Mutation {
+  removeFood(foodId: ID!): Food
 }
 `
 

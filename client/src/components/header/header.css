@@ -1,26 +1,28 @@
 .header-container{
     height: 50px;
-    width: 100%;
+    /* width: 100%; */
     color:#F4C095;
     background-image: radial-gradient(#269792, #1D7874) ;
     display: flex;
     align-items: center;
     position: sticky;
     top: 0;
-    padding: 50px 10px;
+    padding: 50px 20px;
     justify-content: space-between;
 
 }
 .title{
-    font-size: 64px;
-    padding-left: 20px;
+    font-size: 58px;
+    padding-left: 10px;
+    max-width: 200;
 }
 .navbar ul{
     display: inline-flex;
-    padding-right: 200px;
-    font-size: 32px;
+    font-size: 24px;
+   
 }
 .navbar ul .nav{
-    padding-right: 30px;
+    /* padding-right: 5%; */
+    margin: 5%;
     text-decoration: none;
 }

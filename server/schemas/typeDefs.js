@@ -3,10 +3,10 @@ const { gql } = require ('apollo-server-express');
 const typeDefs = gql `
 type Food {
   _id: ID
-  name: String!
+  title: String!
   description: String!
-  image: String
-  ingredients: [String]
+  imageUrl: String
+  public_id: String
 
 }
 

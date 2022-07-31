@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/pocall23/Waste-Not_food-waste-app/static/css/main.ca563a62.css",
+    "main.js": "/pocall23/Waste-Not_food-waste-app/static/js/main.20d1c5a6.js",
+    "static/media/stockfood.jpg": "/pocall23/Waste-Not_food-waste-app/static/media/stockfood.c54a82d1b9f2b64da199.jpg",
+    "index.html": "/pocall23/Waste-Not_food-waste-app/index.html",
+    "main.ca563a62.css.map": "/pocall23/Waste-Not_food-waste-app/static/css/main.ca563a62.css.map",
+    "main.20d1c5a6.js.map": "/pocall23/Waste-Not_food-waste-app/static/js/main.20d1c5a6.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ca563a62.css",
+    "static/js/main.20d1c5a6.js"
+  ]
+}

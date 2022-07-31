@@ -1,13 +1,14 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ApolloClient, ApolloProvider, InMemoryCache, } from '@apollo/client';
+
 // import { createHttpLink } from '@apollo/client'
 // import { setContext } from '@apollo/client/link/context';
 
 // import Home from "../src/pages/home/Home"
 import AvaliableFoods from './pages/AvaliableFood/AvaliableFood';
-import Header from './components/Header/Header';
-import Homepage from './pages/Homepage/Homepage';
+import Header from './components/header/Header';
+import Homepage from './pages/homepage/Homepage';
 
 // const httpLink = createHttpLink({
 //   uri: 'http://localhost:3001/graphql',

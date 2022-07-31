@@ -1,6 +1,7 @@
 const express = require('express');
 const { ApolloServer } = require('apollo-server-express');
 const path = require('path');
+const multer = require ('multer');
 
 const { typeDefs, resolvers } = require('./schemas');
 const db = require('./config/connection');
@@ -12,6 +13,16 @@ const server = new ApolloServer({
   resolvers,
 });
 
+//multer//
+const storage = multer.diskStorage({
+  destination: path.join(__dirname,'../client/public/uploads'),
+  filename: (req,file,callback) => {
+    callback (null,new Date().getTime() + path.extname(file.originalname));
+  }
+});
+app.use(multer({storage}).single('image'));
+app.use(require('../client/src/routes'));
+
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
@@ -19,7 +30,7 @@ if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, '../client/build')));
 }
 
-// app.use('/images', express.static(path.join(__dirname, '../client/images')));
+app.use('/images', express.static(path.join(__dirname, '../client/images')));
 
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '../client/build/index.html'));

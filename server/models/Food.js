@@ -1,7 +1,7 @@
 const { Schema, model } =require('mongoose');
 
 const foodSchema = new Schema({
-  name:{
+  title:{
     type: String,
     required: true,
   },
@@ -9,24 +9,14 @@ const foodSchema = new Schema({
     type: String,
     required: true,
   },
-  servings:{
-    type: Number,
-    default: 1
-  },
-  image: {
+  imageUrl: {
     type: String,
   },
-  ingredients: [
+  public_id: 
     {
       type: String,
       required: true,
     },
-  ],
-  expiry:{
-    type: Date,
-    default: Date.now,
-    get: (timestamp) => dateFormat(timestamp),
-  },
 });
 
 const Food = model('Food', foodSchema);

@@ -2,7 +2,7 @@ import * as React from 'react';
 import { useQuery, useMutation } from '@apollo/client';
 import { QUERY_SINGLE_FOOD } from '../../utils/queries';
 import { REMOVE_FOOD } from '../../utils/mutations'
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 
 import './SingleFood.css'
 
@@ -16,6 +16,8 @@ const SingleFood = () => {
 
   const food = data?.singleFood || [];
   
+  console.log(food)
+
   const { removeFood } = useMutation(REMOVE_FOOD, {
     variables: { foodId: foodId },
   });
@@ -25,7 +27,6 @@ const SingleFood = () => {
   }
  
   
-  console.log(food.image)
 
   if (loading) {
     return <div>Loading...</div>
@@ -37,7 +38,7 @@ const SingleFood = () => {
       </h2>
       <div className="box">
         <div className="image_box" >
-          <img src={food.image} alt={food.name}></img>
+          <img src={food.imageUrl} alt={food.name}></img>
         </div>
         
         <div className='info_box'>
@@ -58,7 +59,12 @@ const SingleFood = () => {
           </ul>
         </div>
       </div>
-      
+      <button className='grab_button'> 
+        <Link to={`/Foods`}>
+          Return to Avilable Foods page
+        </Link> 
+         
+      </button>
       <button className='grab_button' onClick={handleClick}> I'll grab this one! </button>
     </div>
   )

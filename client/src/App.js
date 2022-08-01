@@ -5,7 +5,7 @@ import { ApolloClient, ApolloProvider, InMemoryCache, } from '@apollo/client';
 // import { setContext } from '@apollo/client/link/context';
 
 // import Home from "../src/pages/home/Home"
-import AvaliableFoods from './pages/AvaliableFood/AvaliableFood';
+import AvailableFoods from './pages/AvailableFood/AvailableFood';
 import Header from './components/Header/Header';
 import Homepage from './pages/Homepage/Homepage';
 import SingleFood from './pages/SingleFood/SingleFood';
@@ -51,7 +51,7 @@ function App() {
                 </Route>
                 <Route
                   path="/Foods"
-                  element={<AvaliableFoods/>}>
+                  element={<AvailableFoods/>}>
                 </Route>
                 <Route
                   path="/Food/:foodId"

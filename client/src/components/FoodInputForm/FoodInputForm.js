@@ -68,41 +68,41 @@ export default function FoodInputForm() {
 
        <TextField
           required
-          value={formState.name}
-          name="foodName"
+          // value={formState.name}
+          // name="foodName"
           id="outlined-required"
           label="Food Name"
-          // defaultValue="Food name"
+          defaultValue={formState.name}
           onChange={handleInputChange}
 
         /> <br/>
 
         <TextField
           required
-          value={formState.description}
+          // value={formState.description}
           name="foodDescription"
           id="outlined-required"
           label="Food Description"
-          // defaultValue="Food Description"
+          defaultValue={formState.name}
           onChange={handleInputChange}
         /> <br/>
 
         <TextField
           required
-          value={formState.servings}
+          // value={formState.servings}
           name="foodServings"
           id="outlined-required"
           label="Servings"
-          // defaultValue="Servings"
+          defaultValue={formState.servings}
           onChange={handleInputChange}
         /> <br/>
 
         <TextField
           required
-          value={formState.ingredients}
+          // value={formState.ingredients}
           id="outlined-required"
           label="Ingredients"
-          // defaultValue="Ingredients"
+          defaultValue={formState.ingredients}
           onChange={handleInputChange}
         /> <br/>
 
@@ -116,16 +116,6 @@ export default function FoodInputForm() {
           onChange={handleInputChange}
         /> <br/>
 
-        {/* <input
-          required
-          value={formState.public_id}
-          type="file"
-          id="outlined-required"
-          label="Required"
-          // defaultValue="public ID"
-          onChange={handleInputChange}
-        /> <br/> */}
-  
 
           <LocalizationProvider dateAdapter={AdapterDateFns}>
             <Stack spacing={3}>

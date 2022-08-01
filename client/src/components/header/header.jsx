@@ -11,8 +11,7 @@ export default function Header() {
         <div className="header-centre">
             <div className="navbar">
                 <ul>
-                    <span className="nav">About</span>
-                    <span className="nav">Help Out</span>
+                    <span className="nav">login</span>
                     <span className="nav">FAQ</span>
                 </ul>
             </div>

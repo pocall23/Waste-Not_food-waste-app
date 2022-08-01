@@ -1,6 +1,8 @@
 .button{
-    padding: 8rem;
-    padding-left: 400px;
+    padding: 2rem;
+    margin: auto;
+    text-decoration: none;
+    /* padding-left: 400px; */
     
 }
 .button button{

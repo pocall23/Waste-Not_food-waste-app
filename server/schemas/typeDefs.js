@@ -5,9 +5,11 @@ type Food {
   _id: ID
   name: String!
   description: String!
-  image: String
+  servings: Int
+  imageUrl: String
+  public_id: String
   ingredients: [String]
-
+  
 }
 
 type Query {
@@ -32,6 +34,11 @@ type Mutation {
   addUser(name: String!, email: String!, password: String!): Auth
   login(email:String!, password:String!): Auth
   removeUser(userId: ID!): User
+  singleFood(foodId: ID!): Food
+}
+
+type Mutation {
+  removeFood(foodId: ID!): Food
 }
 `
 

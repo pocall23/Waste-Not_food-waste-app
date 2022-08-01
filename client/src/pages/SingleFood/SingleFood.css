@@ -1,0 +1,63 @@
+.card_container{
+  margin: 12.5%;
+  background-color:whitesmoke;
+  box-shadow: 0px 4px 8px lightgray;
+  transition: 0.3s;
+  height: 100%;
+  width: 75%;
+  padding: 5px;
+}
+
+h2 {
+  color: #269792;
+  margin: 10px;
+  
+}
+.box {
+  display: flex;
+}
+
+ul {
+  list-style-type: none;
+  padding-inline-start: 0;
+}
+
+.image_box {
+  flex: 1;
+  width:30%;
+  height:max-content;
+  background-color: #269792;
+  margin: 10px;
+  padding:10px;
+}
+
+img {
+  width:fit-content;
+  height: fit-content;
+}
+.info_box {
+  flex: 2;
+  width: 50%;
+  height:100%;
+  margin: 2px;
+  padding: 10px;
+  background-color: #F4C095;
+  color:rgb(84, 87, 87)
+}
+
+.grab_button {
+  position: relative;
+  left:40%;
+  padding: 10px;
+  margin: 10px;
+  width: 22%;
+  background-image: radial-gradient(#269792, #1D7874);
+  border: #F4C095;
+  color:#F4C095;
+  font-weight: bold;
+}
+
+a {
+  color:#F4C095;
+  text-decoration: none;
+}

@@ -6,7 +6,7 @@ const resolvers = {
     foods: async () => {
       return Food.find();
     },
-    singlefood: async (foodId) => {
+    singleFood: async (parent, { foodId }) => {
       return Food.findOne({ _id: foodId })
     },
 
@@ -46,7 +46,16 @@ const resolvers = {
   removeUser: async (parent, { userId }) =>{
     return User.findOneAndDelete({ _id: userId })
   }
+  },
+
+  Mutation: {
+    // addFood: async (parent, )
+    removeFood: async(parent, { foodId }) => {
+      return Food.findOneAndDelete({ _id: foodId });
+    },
   }
-}
+};
+
+
 
 module.exports = resolvers;

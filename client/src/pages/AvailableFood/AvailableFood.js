@@ -3,6 +3,9 @@ import { useQuery } from '@apollo/client';
 import { QUERY_FOODS } from '../../utils/queries';
 
 import FoodList from '../../components/Foodlist/FoodList';
+import FoodInputForm from '../../components/FoodInputForm/FoodInputForm';
+
+import './AvailableFood.css'
 
 const AvaliableFoods = () => {
   const { loading, error, data } = useQuery(QUERY_FOODS);
@@ -13,7 +16,7 @@ const AvaliableFoods = () => {
 
   return (
     <div className="container">
-      <div className="col-12 col-md-10 my-3">
+      <div className="foodlist">
           {loading ? (
             <div>Loading...</div>
           ) : (
@@ -23,8 +26,12 @@ const AvaliableFoods = () => {
             />
           )}
         </div>
-
-
+        <div className="foodform">
+          <h2 className='donateheading'>Add a new food to donate</h2>
+          <FoodInputForm/>
+          <button className='form_button'>add new food</button>
+        </div>
+        
     </div>
   )
 }

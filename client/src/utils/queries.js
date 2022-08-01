@@ -5,19 +5,22 @@ export const QUERY_FOODS = gql`
       _id
       name
       description
-      image
+      servings
+      imageUrl
+      public_id
       ingredients
+      
     },
 
   }`;
 
   export const QUERY_SINGLE_FOOD =gql`
     query singleFood ($foodId: ID!) {
-      food(foodiD: $foodId) {
+      singleFood(foodId: $foodId) {
         _id
         name
         description
-        image
+        imageUrl
         ingredients
       }
     

@@ -13,8 +13,12 @@ const foodSchema = new Schema({
     type: Number,
     default: 1
   },
-  image: {
+  imageUrl: {
     type: String,
+  },
+  public_id: {
+    type: String,
+    
   },
   ingredients: [
     {

@@ -5,7 +5,7 @@ import { QUERY_FOODS } from '../../utils/queries';
 import FoodList from '../../components/Foodlist/FoodList';
 import FoodInputForm from '../../components/FoodInputForm/FoodInputForm';
 
-import './AvaliableFood.css'
+import './AvailableFood.css'
 
 const AvaliableFoods = () => {
   const { loading, error, data } = useQuery(QUERY_FOODS);

@@ -1,5 +1,17 @@
 import { gql } from '@apollo/client';
 
+export const ADD_FOOD = gql`
+  mutation addFood($name:string) {
+    addFood(name: $name) {
+      name
+      description
+      servings
+      imageUrl
+      ingredients
+      
+    }
+  }`
+
 export const REMOVE_FOOD = gql`
   mutation removeFood($food: ID!) {
     removeFood(foodId: $foodId) {
@@ -7,9 +19,10 @@ export const REMOVE_FOOD = gql`
       name
       description
       servings
-      image
+      imageUrl
+      
       ingredients
-      expiry
+      
     }
   }
   `;

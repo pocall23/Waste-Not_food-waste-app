@@ -5,9 +5,11 @@ type Food {
   _id: ID
   name: String!
   description: String!
-  image: String
+  servings: Int
+  imageUrl: String
+  public_id: String
   ingredients: [String]
-
+  
 }
 
 type Query {

@@ -9,6 +9,7 @@ const [values, setValues] = useState({
     repeatPassword:'',
     showRepeatPassword:false,
 });
+})
   
 const handleChange = (fieldName) => (event => {
     setValues({

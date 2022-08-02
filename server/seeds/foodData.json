@@ -4,7 +4,8 @@
     "description": "Tomatoes in juice",
     "imageUrl": "https://res.cloudinary.com/dqw6fjffy/image/upload/v1659434347/Can_Tomatoes_tisizj.png",
     "servings": 3,
-    "ingredients": ["Diced tomatoes", "tomato juice"]
+    "ingredients": ["Tomatoes", "Tomato juice"],
+    "expiry": "Sat Aug 10 2022 00:00:00 GMT+0700 (Western Indonesia Time)"
   },
   {
     "name": "Spagetti Bolognese",

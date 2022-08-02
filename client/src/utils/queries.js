@@ -9,7 +9,7 @@ export const QUERY_FOODS = gql`
       imageUrl
       public_id
       ingredients
-      
+      expiry
     },
 
   }`;
@@ -22,6 +22,7 @@ export const QUERY_FOODS = gql`
         description
         imageUrl
         ingredients
+        
       }
     
 

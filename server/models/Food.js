@@ -28,8 +28,8 @@ const foodSchema = new Schema({
   ],
   expiry:{
     type: Date,
-    default: Date.now,
-    get: (timestamp) => dateFormat(timestamp),
+    // default: Date.now,
+    // get: (timestamp) => dateFormat(timestamp),
   },
 });
 

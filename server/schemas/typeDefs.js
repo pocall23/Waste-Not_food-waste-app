@@ -9,7 +9,7 @@ type Food {
   imageUrl: String
   public_id: String
   ingredients: [String]
-  
+  expiry: String
 }
 
 type Query {

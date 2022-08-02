@@ -20,13 +20,14 @@ export default function FoodInputForm() {
     imageUrl:'',
     public_id:'',
     ingredients:'',
-    expiry: "",
+    expiry: '',
 
   })
   const [addFood, { error, data }] = useMutation(ADD_FOOD);
 
   const handleInputChange = (e) => {
-    const { name, value } =e.target;
+    console.log(e)
+    const { name, value } = e.target;
     
     setFormState({
       ...formState,
@@ -35,7 +36,6 @@ export default function FoodInputForm() {
     console.log(formState)
   };
   
-  const [value, setValue]=useState(new Date("2022-08-18T21:11:54"))
   
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -52,12 +52,16 @@ export default function FoodInputForm() {
     }
   };
 
-  const handleChange = (newValue) => {
+  const handleDateChange = (newValue) => {
+    
+    setFormState({
+      ...formState,
+      expiry: newValue
+    })
     console.log(newValue)
-    setValue(newValue);
-
+    
   };
-
+console.log(formState)
   return (
    
     
@@ -122,6 +126,7 @@ export default function FoodInputForm() {
 
         <input
           required
+          
           value={formState.imageUrl}
           type="file"
           id="outlined-required"
@@ -136,10 +141,9 @@ export default function FoodInputForm() {
               <DesktopDatePicker
                 label="expiry"
                 inputFormat="MM/dd/yyyy"
-                fullWidth
-                value={value}
-                onChange={handleChange}
-                renderInput={(params) => <TextField {...params} />}
+                value={formState.expiry}
+                onChange={handleDateChange}
+                renderInput={(params) => <TextField {...params}/>}
               />
             </Stack>
           </LocalizationProvider>

@@ -29,7 +29,7 @@ const AvaliableFoods = () => {
         <div className="foodform">
           <h2 className='donateheading'>Add a new food to donate</h2>
           <FoodInputForm/>
-          <button className='form_button'>add new food</button>
+          
         </div>
         
     </div>

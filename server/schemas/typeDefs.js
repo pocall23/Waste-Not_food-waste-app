@@ -18,6 +18,7 @@ type Query {
 }
 
 type Mutation {
+  addFood(name: String!, description: String!, servings: String, ingredients: [String]): Food
   removeFood(foodId: ID!): Food
 }
 `

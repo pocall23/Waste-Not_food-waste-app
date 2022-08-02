@@ -10,8 +10,8 @@ const foodSchema = new Schema({
     required: true,
   },
   servings:{
-    type: Number,
-    default: 1
+    type: String,
+   
   },
   imageUrl: {
     type: String,
@@ -23,7 +23,7 @@ const foodSchema = new Schema({
   ingredients: [
     {
       type: String,
-      required: true,
+      // required: true,
     },
   ],
   expiry:{

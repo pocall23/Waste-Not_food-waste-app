@@ -23,7 +23,7 @@ const SingleFood = () => {
   });
 
   const handleClick = async () => {
-    removeFood(foodId)
+    removeFood (foodId)
   }
  
   

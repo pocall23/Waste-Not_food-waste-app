@@ -6,7 +6,7 @@ import { ApolloClient, ApolloProvider, InMemoryCache, } from '@apollo/client';
 
 // import Home from "../src/pages/home/Home"
 import AvailableFoods from './pages/AvailableFood/AvailableFood';
-import Header from './components/Header/Header';
+import Header from './components/Header/header';
 import Homepage from './pages/Homepage/Homepage';
 import SingleFood from './pages/SingleFood/SingleFood';
 

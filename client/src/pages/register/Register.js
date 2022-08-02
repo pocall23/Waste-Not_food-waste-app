@@ -1,6 +1,6 @@
 
 import React from "react";
-import Header from "../../components/Header/header"
+import Header from "../../components/Header/Header"
 import Feature from '../../components/Feature/Feature'
 import RegistrationForm from "../../components/registrationForm/RegistrationForm.JS";
 

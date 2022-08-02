@@ -1,7 +1,7 @@
 import { gql } from '@apollo/client';
 
 export const ADD_FOOD = gql`
-  mutation addFood($name:string) {
+  mutation addFood($name:String) {
     addFood(name: $name) {
       name
       description

@@ -20,20 +20,23 @@ export default function FoodInputForm() {
     imageUrl:'',
     public_id:'',
     ingredients:'',
-    expiry: new Date ('2022-07-18T21:11:54'),
+    expiry: '',
 
   })
   const [addFood, { error, data }] = useMutation(ADD_FOOD);
 
   const handleInputChange = (e) => {
-    const { name, value } =e.target;
+    console.log(e)
+    const { name, value } = e.target;
     
     setFormState({
       ...formState,
       [name]: value,
     })
+    console.log(formState)
   };
-
+  
+  
   const handleSubmit = async (event) => {
     event.preventDefault();
     console.log(formState);
@@ -42,13 +45,23 @@ export default function FoodInputForm() {
       const { data } = await addFood({
         variables: { ...formState },
       });
-
+      console.log(data)
       // Auth.login(data.addProfile.token);
     } catch (e) {
       console.error(e);
     }
   };
 
+  const handleDateChange = (newValue) => {
+    
+    setFormState({
+      ...formState,
+      expiry: newValue
+    })
+    console.log(newValue)
+    
+  };
+console.log(formState)
   return (
    
     
@@ -69,10 +82,11 @@ export default function FoodInputForm() {
        <TextField
           required
           // value={formState.name}
-          // name="foodName"
+          name="name"
           id="outlined-required"
           label="Food Name"
-          defaultValue={formState.name}
+          fullWidth
+          // defaultValue={formState.name}
           onChange={handleInputChange}
 
         /> <br/>
@@ -80,34 +94,39 @@ export default function FoodInputForm() {
         <TextField
           required
           // value={formState.description}
-          name="foodDescription"
+          name="description"
           id="outlined-required"
           label="Food Description"
-          defaultValue={formState.name}
+          fullWidth
+          // defaultValue={formState.name}
           onChange={handleInputChange}
         /> <br/>
 
         <TextField
           required
           // value={formState.servings}
-          name="foodServings"
+          name="servings"
           id="outlined-required"
           label="Servings"
-          defaultValue={formState.servings}
+          fullWidth
+          // defaultValue={formState.servings}
           onChange={handleInputChange}
         /> <br/>
 
         <TextField
           required
           // value={formState.ingredients}
+          name="ingredients"
           id="outlined-required"
           label="Ingredients"
-          defaultValue={formState.ingredients}
+          fullWidth
+          // defaultValue={formState.ingredients}
           onChange={handleInputChange}
         /> <br/>
 
         <input
           required
+          
           value={formState.imageUrl}
           type="file"
           id="outlined-required"
@@ -123,8 +142,8 @@ export default function FoodInputForm() {
                 label="expiry"
                 inputFormat="MM/dd/yyyy"
                 value={formState.expiry}
-                onChange={handleInputChange}
-                renderInput={(params) => <TextField {...params} />}
+                onChange={handleDateChange}
+                renderInput={(params) => <TextField {...params}/>}
               />
             </Stack>
           </LocalizationProvider>

@@ -6,7 +6,6 @@ import { setContext } from '@apollo/client/link/context';
 
 // import Home from "../src/pages/home/Home"
 import Homepage from './pages/homepage/Homepage';
-import AvailableFoods from './pages/AvailableFood/AvailableFood';
 import Header from './components/Header/Header';
 import SingleFood from './pages/SingleFood/SingleFood';
 import AvaliableFoods from './pages/AvaliableFood/AvaliableFood';
@@ -53,16 +52,12 @@ function App() {
                 </Route>
                 <Route
                   path="/Foods"
-                  element={<AvailableFoods/>}>
+                  element={<AvaliableFoods />}>
                 </Route>
                 <Route
                   path="/Food/:foodId"
                   element={<SingleFood/>}>
                 </Route>
-                <Route
-                  path="/foods"
-                  element={<AvaliableFoods/>}>
-                  </Route>
                   <Route
                   path ="/register"
                   element={<Register/>}>

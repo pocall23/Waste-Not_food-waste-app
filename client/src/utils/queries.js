@@ -26,3 +26,24 @@ export const QUERY_FOODS = gql`
     
 
     }`;
+    export const QUERY_USERS = gql`
+    query allUser{
+      users {
+        _id
+        name
+      }
+    }`;
+    export const QUERY_SINGLE_PROFILES = gql`
+    query singleProfile($profileId: ID!){
+      _id
+      name
+    }`;
+
+    export const QUERY_USER = gql`
+    query user {
+      user{ 
+        _id
+        name
+      }
+    }`
+;

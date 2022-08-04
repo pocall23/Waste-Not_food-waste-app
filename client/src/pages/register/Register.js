@@ -6,7 +6,7 @@ import RegistrationForm from "../../components/registrationForm/RegistrationForm
 
 export default function Register(){
     <div>
-        <Header />
+         <Header />
         <div className="register-main">
             <Feature />
             <RegistrationForm />

@@ -33,10 +33,24 @@ export default function FoodInputForm() {
       ...formState,
       [name]: value,
     })
-    console.log(formState)
+    
   };
-  
-  
+  console.log(formState)
+
+  const handleDateChange = (newValue) => {
+
+    setFormState({
+      ...formState,
+      expiry: newValue
+    })
+    console.log(newValue)
+  };
+
+  const handleImageChange = (event) => {
+    console.log(event.target.value)
+    const image = event.target.value
+  }
+
   const handleSubmit = async (event) => {
     event.preventDefault();
     console.log(formState);
@@ -46,25 +60,16 @@ export default function FoodInputForm() {
         variables: { ...formState },
       });
       console.log(data)
+      window.location.reload();
       // Auth.login(data.addProfile.token);
     } catch (e) {
       console.error(e);
     }
   };
 
-  const handleDateChange = (newValue) => {
-    
-    setFormState({
-      ...formState,
-      expiry: newValue
-    })
-    console.log(newValue)
-    
-  };
-console.log(formState)
+
   return (
    
-    
       <Box
       component="form" 
       action="" 
@@ -104,35 +109,33 @@ console.log(formState)
 
         <TextField
           required
-          // value={formState.servings}
+          
           name="servings"
           id="outlined-required"
           label="Servings"
           fullWidth
-          // defaultValue={formState.servings}
+          
           onChange={handleInputChange}
         /> <br/>
 
         <TextField
           required
-          // value={formState.ingredients}
+        
           name="ingredients"
           id="outlined-required"
           label="Ingredients"
           fullWidth
-          // defaultValue={formState.ingredients}
+          
           onChange={handleInputChange}
         /> <br/>
 
         <input
           required
-          
-          value={formState.imageUrl}
           type="file"
           id="outlined-required"
           label="image file"
           // defaultValue="public ID"
-          onChange={handleInputChange}
+          onChange={handleImageChange}
         /> <br/>
 
 

@@ -11,8 +11,8 @@ const resolvers = {
   },
 
   Mutation: {
-    addFood: async (parent, { name, description, servings, ingredients } ) => {
-      return Food.create({ name, description, servings, ingredients });
+    addFood: async (parent, { name, description, servings, expiry, imageUrl, ingredients } ) => {
+      return Food.create({ name, description, servings, expiry, imageUrl, ingredients });
     },
 
     removeFood: async(parent, { foodId }) => {

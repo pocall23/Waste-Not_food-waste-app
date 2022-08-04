@@ -65,7 +65,6 @@ const image = document.querySelector('#fileInput');
           ...formState,
           imageUrl: uploadedFileUrl,
         })
-        
       }
     })
     .catch(err => console.error(err));

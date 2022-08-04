@@ -8,9 +8,9 @@ import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { AdapterMoment } from '@mui/x-date-pickers/AdapterMoment';
 import { DesktopDatePicker } from '@mui/x-date-pickers/DesktopDatePicker';
 import Box from '@mui/material/Box';
+import axios from 'axios';
 
 import { ADD_FOOD } from '../../utils/mutations';
-
 
 export default function FoodInputForm() {
   const [formState, setFormState] = useState({
@@ -22,7 +22,8 @@ export default function FoodInputForm() {
     ingredients:'',
     expiry: '',
 
-  })
+  });
+
   const [addFood, { error, data }] = useMutation(ADD_FOOD);
 
   const handleInputChange = (e) => {
@@ -36,6 +37,40 @@ export default function FoodInputForm() {
     console.log(formState)
   };
   
+  const handleInputImage = (e) => {
+    const uploadFileEle = document.getElementById("fileInput")
+    console.log(uploadFileEle.files[0]);
+const file = uploadFileEle.files[0];
+const formData = new FormData();
+formData.set('file',file);
+
+const CLOUDINARY_URL = 'https://api.cloudinary.com/v1_1/dqw6fjffy/image/upload';
+const CLOUDINARY_UPLOAD_PRESET = 'ml_default';
+const image = document.querySelector('#fileInput');
+
+  formData.append('upload_preset', CLOUDINARY_UPLOAD_PRESET);
+
+  fetch(CLOUDINARY_URL, {
+    method: 'POST',
+    body: formData,
+  })
+    .then(response => response.json())
+    .then((data) => {
+      if (data.secure_url !== '') {
+        const uploadedFileUrl = data.secure_url;
+        console.log(uploadedFileUrl);
+        // console.log(typeof uploadedFileUrl);
+        
+        setFormState({
+          ...formState,
+          imageUrl: uploadedFileUrl,
+        })
+        
+      }
+    })
+    .catch(err => console.error(err));
+
+  }
   
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -62,9 +97,9 @@ export default function FoodInputForm() {
     
   };
 console.log(formState)
+
   return (
    
-    
       <Box
       component="form" 
       action="" 
@@ -124,17 +159,18 @@ console.log(formState)
           onChange={handleInputChange}
         /> <br/>
 
-        <input
-          required
+        <input id="fileInput" type="file" onChange={handleInputImage} />
+          {/* // required
           
-          value={formState.imageUrl}
-          type="file"
-          id="outlined-required"
-          label="image file"
-          // defaultValue="public ID"
-          onChange={handleInputChange}
-        /> <br/>
+          // value={formState.imageUrl}
+          // type="file"
+          // id="fileInput"
+          // label="image file"
+          // // defaultValue="public ID"
+          // onChange={handleInputChange} */}
+        
 
+        <br/>
 
           <LocalizationProvider dateAdapter={AdapterDateFns}>
             <Stack spacing={3}>

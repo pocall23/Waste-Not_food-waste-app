@@ -18,7 +18,7 @@ type Query {
 }
 
 type Mutation {
-  addFood(name: String!, description: String!, servings: String, ingredients: [String]): Food
+  addFood(name: String!, description: String!, servings: String, ingredients: [String], imageUrl: String): Food
   removeFood(foodId: ID!): Food
 }
 `

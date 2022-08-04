@@ -16,10 +16,7 @@ const foodSchema = new Schema({
   imageUrl: {
     type: String,
   },
-  public_id: {
-    type: String,
-    
-  },
+  
   ingredients: [
     {
       type: String,

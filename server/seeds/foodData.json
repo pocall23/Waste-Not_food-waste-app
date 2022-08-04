@@ -2,7 +2,7 @@
   {
     "name": "Can tomatoes",
     "description": "Tomatoes in juice",
-    "image": "./images/Can_Tomatoes.png",
+    "imageUrl": "https://res.cloudinary.com/dqw6fjffy/image/upload/v1659434347/Can_Tomatoes_tisizj.png",
     "servings": 3,
     "ingredients": ["Tomatoes", "Tomato juice"],
     "expiry": "Sat Aug 10 2022 00:00:00 GMT+0700 (Western Indonesia Time)"
@@ -10,8 +10,8 @@
   {
     "name": "Spagetti Bolognese",
     "description": "Homemade Spagetti Bolognese",
-    "image": "./images/Spagetti_Bolognese.png",
-    "ingredients": ["Mince", "Olive Oil", "Onion", "Garlic", "Can Tomatoes", "Tomato Paste", "Salt", "Basil", "Oregano", "Tabasco"],
-    "expiry": "Sat Aug 10 2022 00:00:00 GMT+0700 (Western Indonesia Time)"
+    "imageUrl": "https://res.cloudinary.com/dqw6fjffy/image/upload/v1659434403/Spagetti_Bolognese_b9eaqe.png",
+    "servings": 4,
+    "ingredients": ["Mince", "Olive Oil", "Onion", "Garlic", "Can Tomatoes", "Tomato Paste", "Salt", "Basil", "Oregano", "Tabasco"]
   }
 ]

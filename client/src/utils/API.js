@@ -1,12 +1,6 @@
 import cloudinary from 'cloudinary';
 
-
-
-export default { search };
-
-
-
-const cloudinary = require('cloudinary');
+// const cloudinary = require('cloudinary');
 
 cloudinary.config({
 cloud_name: 'dqw6fjffy',

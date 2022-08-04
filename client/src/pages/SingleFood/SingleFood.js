@@ -23,7 +23,7 @@ const SingleFood = () => {
   });
 
   const handleClick = async () => {
-    removeFood (foodId)
+    removeFood(foodId)
   }
  
   
@@ -49,11 +49,11 @@ const SingleFood = () => {
             </li>
             <li>
               <h4>Ingredients:</h4>
-              <p>{food.ingredients} </p> 
+              <p>{food.ingredients.join(', ')} </p> 
     
             </li>
             <li>
-            <h4>Expiry Date: {food.expiry} </h4>
+            <h4>Expiry Date: {food.date} </h4>
                
             </li>
           </ul>

@@ -49,10 +49,7 @@ const resolvers = {
   },
 
   Mutation: {
-    addFood: async (parent, { name, description, servings, ingredients } ) => {
-      return Food.create({ name, description, servings, ingredients });
-    },
-
+    // addFood: async (parent, )
     removeFood: async(parent, { foodId }) => {
       return Food.findOneAndDelete({ _id: foodId });
     },

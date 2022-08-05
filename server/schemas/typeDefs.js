@@ -8,7 +8,7 @@ type Food {
   servings: Int
   imageUrl: String
   public_id: String
-  ingredients: [String]
+  ingredients: String
   expiry: String
 }
 
@@ -18,7 +18,9 @@ type Query {
 }
 
 type Mutation {
-  addFood(name: String!, description: String!, servings: String, ingredients: [String], imageUrl: String): Food
+
+  addFood(name: String!, description: String!, servings: String, expiry: String, imageUrl: String, ingredients: String): Food
+
   removeFood(foodId: ID!): Food
 }
 `

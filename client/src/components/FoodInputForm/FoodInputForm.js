@@ -34,8 +34,9 @@ export default function FoodInputForm() {
       ...formState,
       [name]: value,
     })
-    console.log(formState)
+    
   };
+
   
   const handleInputImage = (e) => {
     const uploadFileEle = document.getElementById("fileInput")
@@ -80,11 +81,13 @@ const image = document.querySelector('#fileInput');
         variables: { ...formState },
       });
       console.log(data)
+      window.location.reload();
       // Auth.login(data.addProfile.token);
     } catch (e) {
       console.error(e);
     }
   };
+
 
   const handleDateChange = (newValue) => {
     
@@ -138,25 +141,26 @@ console.log(formState)
 
         <TextField
           required
-          // value={formState.servings}
+          
           name="servings"
           id="outlined-required"
           label="Servings"
           fullWidth
-          // defaultValue={formState.servings}
+          
           onChange={handleInputChange}
         /> <br/>
 
         <TextField
           required
-          // value={formState.ingredients}
+        
           name="ingredients"
           id="outlined-required"
           label="Ingredients"
           fullWidth
-          // defaultValue={formState.ingredients}
+          
           onChange={handleInputChange}
         /> <br/>
+
 
         <input id="fileInput" type="file" onChange={handleInputImage} />
           {/* // required
@@ -168,6 +172,7 @@ console.log(formState)
           // // defaultValue="public ID"
           // onChange={handleInputChange} */}
         
+
 
         <br/>
 

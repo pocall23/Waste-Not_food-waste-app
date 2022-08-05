@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { useState } from 'react'
 import { useMutation } from '@apollo/client';
+
 import Stack from '@mui/material/Stack';
 import TextField from '@mui/material/TextField';
 import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
@@ -9,8 +10,9 @@ import { AdapterMoment } from '@mui/x-date-pickers/AdapterMoment';
 import { DesktopDatePicker } from '@mui/x-date-pickers/DesktopDatePicker';
 import Box from '@mui/material/Box';
 
-import { ADD_FOOD } from '../../utils/mutations';
+import axios from 'axios';
 
+import { ADD_FOOD } from '../../utils/mutations';
 
 export default function FoodInputForm() {
   const [formState, setFormState] = useState({
@@ -22,16 +24,64 @@ export default function FoodInputForm() {
     ingredients:'',
     expiry: new Date ('2022-07-18T21:11:54'),
 
-  })
+  });
+
   const [addFood, { error, data }] = useMutation(ADD_FOOD);
 
   const handleInputChange = (e) => {
-    const { name, value } =e.target;
+    // console.log(e)
+    const { name, value } = e.target;
     
     setFormState({
       ...formState,
       [name]: value,
     })
+    
+  };
+  
+  const handleInputImage = (e) => {
+    const uploadFileEle = document.getElementById("fileInput")
+    console.log(uploadFileEle.files[0]);
+    const file = uploadFileEle.files[0];
+    const formData = new FormData();
+    formData.set('file', file);
+
+    const CLOUDINARY_URL = 'https://api.cloudinary.com/v1_1/dqw6fjffy/image/upload';
+    const CLOUDINARY_UPLOAD_PRESET = 'ml_default';
+    const image = document.querySelector('#fileInput');
+
+    formData.append('upload_preset', CLOUDINARY_UPLOAD_PRESET);
+
+    fetch(CLOUDINARY_URL, {
+      method: 'POST',
+      body: formData,
+    })
+      .then(response => response.json())
+      .then((data) => {
+        if (data.secure_url !== '') {
+          const uploadedFileUrl = data.secure_url;
+          console.log(uploadedFileUrl);
+          // console.log(typeof uploadedFileUrl);
+          
+          setFormState({
+            ...formState,
+            imageUrl: uploadedFileUrl,
+          })
+        }
+      })
+    .catch(err => console.error(err));
+
+  }
+  
+  // console.log(formState)
+
+  const handleDateChange = (newValue) => {
+
+    setFormState({
+      ...formState,
+      expiry: newValue
+    })
+    console.log(newValue)
   };
 
   const handleSubmit = async (event) => {
@@ -42,7 +92,8 @@ export default function FoodInputForm() {
       const { data } = await addFood({
         variables: { ...formState },
       });
-
+      console.log(data)
+      window.location.reload();
       // Auth.login(data.addProfile.token);
     } catch (e) {
       console.error(e);
@@ -51,14 +102,13 @@ export default function FoodInputForm() {
 
   return (
    
-    
       <Box
       component="form" 
       action="" 
       method="POST" 
       enctype="multipart/form-data"
       sx={{
-        '& .MuiTextField-root': { m: 2, Width: '50ch' },
+        '& .MuiTextField-root': { m: 2, MaxWidth: '50ch' },
       }}
       noValidate
       autoComplete="off"
@@ -89,33 +139,31 @@ export default function FoodInputForm() {
 
         <TextField
           required
-          // value={formState.servings}
-          name="foodServings"
+          
+          name="servings"
           id="outlined-required"
           label="Servings"
-          defaultValue={formState.servings}
+          fullWidth
+          
           onChange={handleInputChange}
         /> <br/>
 
         <TextField
           required
-          // value={formState.ingredients}
+        
+          name="ingredients"
           id="outlined-required"
           label="Ingredients"
-          defaultValue={formState.ingredients}
+          fullWidth
+          
           onChange={handleInputChange}
         /> <br/>
 
-        <input
-          required
-          value={formState.imageUrl}
-          type="file"
-          id="outlined-required"
-          label="image file"
-          // defaultValue="public ID"
-          onChange={handleInputChange}
-        /> <br/>
+        <input id="fileInput" type="file" onChange={handleInputImage} accept="image/*"/>
 
+        
+
+        <br/>
 
           <LocalizationProvider dateAdapter={AdapterDateFns}>
             <Stack spacing={3}>

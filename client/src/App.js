@@ -11,8 +11,9 @@ import SingleFood from './pages/SingleFood/SingleFood';
 import AvaliableFoods from './pages/AvaliableFood/AvaliableFood';
 import Register from './pages/register/Register';
 
-const httpLink = createHttpLink({
-  uri: 'http://localhost:3000/graphql',
+
+// const httpLink = createHttpLink({
+//   uri: 'http://localhost:3001/graphql',
 
 });
 

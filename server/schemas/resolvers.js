@@ -23,8 +23,13 @@ const resolvers = {
       
       const user = await User.create({ name, create, password });
       const token = signToken(user);
-
       return { token, user }
+      
+    addFood: async (parent, { name, description, servings, expiry, imageUrl, ingredients } ) => {
+      return Food.create({ name, description, servings, expiry, imageUrl, ingredients });
+    },
+
+
   },
   login: async (parents, { email, password }) => {
     const user = await User.findOne({ email });

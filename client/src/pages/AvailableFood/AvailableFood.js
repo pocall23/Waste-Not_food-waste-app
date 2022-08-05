@@ -9,11 +9,10 @@ import './AvailableFood.css'
 
 const AvaliableFoods = () => {
   const { loading, error, data } = useQuery(QUERY_FOODS);
-  console.log(loading)
-  console.log(data);
+  
   const foods = data?.foods || [];
   console.log(foods)
-
+  
   return (
     <div className="container">
       <div className="foodlist">

@@ -16,20 +16,15 @@ const foodSchema = new Schema({
   imageUrl: {
     type: String,
   },
-  public_id: {
+  ingredients: {
+
+    type: String,
+    // required: true,
+  },
+  
+  expiry:{
     type: String,
     
-  },
-  ingredients: [
-    {
-      type: String,
-      required: true,
-    },
-  ],
-  expiry:{
-    type: Date,
-    default: Date.now,
-    get: (timestamp) => dateFormat(timestamp),
   },
 });
 

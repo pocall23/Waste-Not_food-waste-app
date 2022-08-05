@@ -31,7 +31,7 @@ function FoodList({ foods, title }) {
             <CardMedia
               component="img"
               height="194"
-              image= {food.image}
+              image= {food.imageUrl}
               alt={food.name}
             />
             <CardContent>

@@ -5,10 +5,14 @@ import { ApolloClient, ApolloProvider, InMemoryCache, } from '@apollo/client';
 // import { setContext } from '@apollo/client/link/context';
 
 // import Home from "../src/pages/home/Home"
+
+
 import AvailableFoods from './pages/AvailableFood/AvailableFood';
-import Header from './components/Header/header';
-import Homepage from './pages/Homepage/Homepage';
+import Header from './components/header/Header';
+import Homepage from './pages/homepage/Homepage';
+
 import SingleFood from './pages/SingleFood/SingleFood';
+
 
 // const httpLink = createHttpLink({
 //   uri: 'http://localhost:3001/graphql',

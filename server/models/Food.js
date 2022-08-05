@@ -16,7 +16,6 @@ const foodSchema = new Schema({
   imageUrl: {
     type: String,
   },
-  
   ingredients: {
 
     type: String,

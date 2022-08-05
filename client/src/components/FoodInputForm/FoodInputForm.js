@@ -38,6 +38,10 @@ export default function FoodInputForm() {
     })
     
   };
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8f6197e760249d2523d3fe036ddc121cebe55bf9
   
   const handleInputImage = (e) => {
     const uploadFileEle = document.getElementById("fileInput")
@@ -73,6 +77,7 @@ export default function FoodInputForm() {
 
   }
   
+<<<<<<< HEAD
   // console.log(formState)
 
   const handleDateChange = (newValue) => {
@@ -84,6 +89,8 @@ export default function FoodInputForm() {
     console.log(newValue)
   };
 
+=======
+>>>>>>> 8f6197e760249d2523d3fe036ddc121cebe55bf9
   const handleSubmit = async (event) => {
     event.preventDefault();
     console.log(formState);
@@ -100,6 +107,20 @@ export default function FoodInputForm() {
     }
   };
 
+<<<<<<< HEAD
+=======
+
+  const handleDateChange = (newValue) => {
+    
+    setFormState({
+      ...formState,
+      expiry: newValue
+    })
+    console.log(newValue)
+    
+  };
+console.log(formState)
+>>>>>>> 8f6197e760249d2523d3fe036ddc121cebe55bf9
 
   return (
    
@@ -162,9 +183,24 @@ export default function FoodInputForm() {
           onChange={handleInputChange}
         /> <br/>
 
+<<<<<<< HEAD
         <input id="fileInput" type="file" onChange={handleInputImage} accept="image/*"/>
 
         
+=======
+
+        <input id="fileInput" type="file" onChange={handleInputImage} />
+          {/* // required
+          
+          // value={formState.imageUrl}
+          // type="file"
+          // id="fileInput"
+          // label="image file"
+          // // defaultValue="public ID"
+          // onChange={handleInputChange} */}
+        
+
+>>>>>>> 8f6197e760249d2523d3fe036ddc121cebe55bf9
 
         <br/>
 

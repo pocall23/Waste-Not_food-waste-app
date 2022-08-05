@@ -6,7 +6,7 @@ const resolvers = {
     foods: async () => {
       return Food.find();
     },
-    
+
     singleFood: async (parent, { foodId }) => {
       return Food.findOne({ _id: foodId })
     },
@@ -20,37 +20,13 @@ const resolvers = {
   },
 
   Mutation: {
-    addUser: async (parent, { name, email, password }) => {
-      
-      const user = await User.create({ name, create, password });
-      const token = signToken(user);
-      return { token, user }
-    },
+
       
     addFood: async (parent, { name, description, servings, expiry, imageUrl, ingredients } ) => {
       return Food.create({ name, description, servings, expiry, imageUrl, ingredients });
     },
 
-    login: async (parents, { email, password }) => {
-    const user = await User.findOne({ email });
-
-    if(!user){
-      throw new AuthenticationError('No user with this email found')
-    }
-
-    const correctPassword =  await user.isCorrectPassword(password);
-
-    if(!correctPassword){
-      throw new AuthenticationError("Incorrect Password!");
-    }
-
-    const token = signToken(user);
-    return { token, user }
-  },
-
-  removeUser: async (parent, { userId }) => {
-    return User.findOneAndDelete({ _id: userId })
-  }
+   
   },
 
   Mutation: {
@@ -58,8 +34,37 @@ const resolvers = {
     removeFood: async(parent, { foodId }) => {
       return Food.findOneAndDelete({ _id: foodId });
     },
-  }
-};
+  },
+  Mutation: {
+    addUser: async (parent, { name, email, password }) => {
+      
+      const user = await User.create({ name, create, password });
+      const token = signToken(user);
+      return { token, user }
+    },
+    login: async (parents, { email, password }) => {
+      const user = await User.findOne({ email });
+  
+      if(!user){
+        throw new AuthenticationError('No user with this email found')
+      }
+  
+      const correctPassword =  await user.isCorrectPassword(password);
+  
+      if(!correctPassword){
+        throw new AuthenticationError("Incorrect Password!");
+      }
+  
+      const token = signToken(user);
+      return { token, user }
+    },
+  
+    removeUser: async (parent, { userId }) => {
+      return User.findOneAndDelete({ _id: userId })
+    }
+
+  },
+}
 
 
 

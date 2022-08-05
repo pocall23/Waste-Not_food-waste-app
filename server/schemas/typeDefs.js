@@ -14,7 +14,7 @@ type Food {
 
 type Query {
   foods:[Food]
-  singlefood(foodId: ID!): [Food]
+  singleFood(foodId: ID!): [Food]
   user(id: ID!): User
 }
 
@@ -29,11 +29,13 @@ type User {
   email: String
   password: String
 }
+type Users{
+  _id : ID!
+  name: String
+}
 
 type Mutation {
-  addUser(name: String!, email: String!, password: String!): Auth
-  login(email:String!, password:String!): Auth
-  removeUser(userId: ID!): User
+
   singleFood(foodId: ID!): Food
 }
 
@@ -42,6 +44,16 @@ type Mutation {
   addFood(name: String!, description: String!, servings: String, expiry: String, imageUrl: String, ingredients: String): Food
 
   removeFood(foodId: ID!): Food
+}
+
+type mutation {
+  addUser(name: String!, email: String!, password: String!): Auth
+
+  User(userId: ID!, name: String!)
+
+  login(email:String!, password:String!): Auth
+
+  removeUser(userId: ID!): User
 }
 `
 

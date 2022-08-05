@@ -4,14 +4,14 @@
     "description": "Tomatoes in juice",
     "imageUrl": "https://res.cloudinary.com/dqw6fjffy/image/upload/v1659434347/Can_Tomatoes_tisizj.png",
     "servings": 3,
-    "ingredients": ["Tomatoes", "Tomato juice"],
-    "expiry": "Sat Aug 10 2022 00:00:00 GMT+0700 (Western Indonesia Time)"
+    "ingredients": "Tomatoes, Tomato juice",
+    "expiry": "Sat Aug 10 2022"
   },
   {
     "name": "Spagetti Bolognese",
     "description": "Homemade Spagetti Bolognese",
     "imageUrl": "https://res.cloudinary.com/dqw6fjffy/image/upload/v1659434403/Spagetti_Bolognese_b9eaqe.png",
     "servings": 4,
-    "ingredients": ["Mince", "Olive Oil", "Onion", "Garlic", "Can Tomatoes", "Tomato Paste", "Salt", "Basil", "Oregano", "Tabasco"]
+    "ingredients": "Mince, Olive Oil, Onion, Garlic, Can Tomatoes, Tomato Paste, Salt, Basil, Oregano, Tabasco"
   }
 ]

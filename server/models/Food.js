@@ -17,16 +17,15 @@ const foodSchema = new Schema({
     type: String,
   },
   
-  ingredients: [
-    {
-      type: String,
-      // required: true,
-    },
-  ],
+  ingredients: {
+
+    type: String,
+    // required: true,
+  },
+  
   expiry:{
-    type: Date,
-    // default: Date.now,
-    // get: (timestamp) => dateFormat(timestamp),
+    type: String,
+    
   },
 });
 

@@ -8,8 +8,8 @@ import { ApolloClient, ApolloProvider, InMemoryCache, } from '@apollo/client';
 
 
 import AvailableFoods from './pages/AvailableFood/AvailableFood';
-import Header from './components/header/Header';
-import Homepage from './pages/homepage/Homepage';
+import Header from './components/Header/header';
+import Homepage from './pages/Homepage/Homepage';
 
 import SingleFood from './pages/SingleFood/SingleFood';
 

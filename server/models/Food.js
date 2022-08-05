@@ -26,6 +26,8 @@ const foodSchema = new Schema({
     type: String,
     
   },
+}, {
+  timestamps: true
 });
 
 const Food = model('Food', foodSchema);

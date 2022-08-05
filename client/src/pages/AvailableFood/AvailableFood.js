@@ -1,22 +1,20 @@
 import * as React from 'react';
-import { useQuery } from '@apollo/client';
-import { QUERY_FOODS } from '../../utils/queries';
+
 
 import FoodList from '../../components/Foodlist/FoodList';
 import FoodInputForm from '../../components/FoodInputForm/FoodInputForm';
 
 import './AvailableFood.css'
 
-const AvaliableFoods = () => {
-  const { loading, error, data } = useQuery(QUERY_FOODS);
+const AvaliableFoods = (props) => {
   
-  const foods = data?.foods || [];
+  const foods = props.data?.foods || [];
   console.log(foods)
   
   return (
     <div className="container">
       <div className="foodlist">
-          {loading ? (
+          {props.loading ? (
             <div>Loading...</div>
           ) : (
             <FoodList

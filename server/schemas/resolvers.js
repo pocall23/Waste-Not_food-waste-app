@@ -3,7 +3,7 @@ const { Food } = require('../models');
 const resolvers = {
   Query: {
     foods: async () => {
-      return Food.find();
+      return Food.find({}).sort({createdAt: -1});
     },
     singleFood: async (parent, { foodId }) => {
       return Food.findOne({ _id: foodId })

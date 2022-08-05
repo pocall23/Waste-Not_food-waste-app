@@ -7,7 +7,7 @@ import { Link, useParams } from 'react-router-dom';
 
 import './SingleFood.css'
 
-const SingleFood = () => {
+const SingleFood = (props) => {
   const {foodId} = useParams();
 
   const [Available, SetAvailable] = useState(true);
@@ -33,6 +33,8 @@ const SingleFood = () => {
 
       const { data } = await removeFood(foodId)
       SetAvailable(!Available)
+
+      props.onClickGrabFood();
       // window.location.reload();
       
       
@@ -52,7 +54,7 @@ const SingleFood = () => {
       <div className="card_container">
         <h2> The food was purchased and is no longer avaliable</h2>
         <button className='grab_button' > 
-          <Link to={`/Foods`}>
+          <Link  to={`/Foods`}>
             Return to able Available Foods page
           </Link> 
         </button>

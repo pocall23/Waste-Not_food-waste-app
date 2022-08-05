@@ -6,6 +6,7 @@ const resolvers = {
     foods: async () => {
       return Food.find();
     },
+    
     singleFood: async (parent, { foodId }) => {
       return Food.findOne({ _id: foodId })
     },
@@ -24,14 +25,13 @@ const resolvers = {
       const user = await User.create({ name, create, password });
       const token = signToken(user);
       return { token, user }
+    },
       
     addFood: async (parent, { name, description, servings, expiry, imageUrl, ingredients } ) => {
       return Food.create({ name, description, servings, expiry, imageUrl, ingredients });
     },
 
-
-  },
-  login: async (parents, { email, password }) => {
+    login: async (parents, { email, password }) => {
     const user = await User.findOne({ email });
 
     if(!user){
@@ -48,7 +48,7 @@ const resolvers = {
     return { token, user }
   },
 
-  removeUser: async (parent, { userId }) =>{
+  removeUser: async (parent, { userId }) => {
     return User.findOneAndDelete({ _id: userId })
   }
   },

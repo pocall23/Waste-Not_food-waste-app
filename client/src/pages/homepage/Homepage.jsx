@@ -1,6 +1,6 @@
 
 import About from "../../components/about/about"
-import Help from "../../components/Help/help"
+import Help from "../../components/help/Help"
 import SignUp from "../../components/signUp/signUp"
 
 

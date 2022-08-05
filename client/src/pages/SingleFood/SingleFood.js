@@ -28,9 +28,6 @@ const SingleFood = () => {
 
 
   const handleClick = async () => {
-<<<<<<< HEAD
-    removeFood(foodId)
-=======
     console.log(food)
     if (food) {
 
@@ -43,7 +40,6 @@ const SingleFood = () => {
 
       // console.log(`Food doesn't exist`)
     }
->>>>>>> 2e2cb228aad2d897c47099432b44ec757df14dd8
   }
  
 

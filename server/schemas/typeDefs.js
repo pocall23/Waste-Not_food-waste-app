@@ -38,12 +38,9 @@ type Mutation {
 }
 
 type Mutation {
-<<<<<<< HEAD
-=======
 
   addFood(name: String!, description: String!, servings: String, expiry: String, imageUrl: String, ingredients: String): Food
 
->>>>>>> 2e2cb228aad2d897c47099432b44ec757df14dd8
   removeFood(foodId: ID!): Food
 }
 `

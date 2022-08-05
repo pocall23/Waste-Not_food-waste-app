@@ -6,14 +6,14 @@ import { setContext } from '@apollo/client/link/context';
 
 // import Home from "../src/pages/home/Home"
 import Homepage from './pages/homepage/Homepage';
-import Header from './components/Header/Header';
+import Header from './components/header/Header';
 import SingleFood from './pages/SingleFood/SingleFood';
-import AvaliableFoods from './pages/AvaliableFood/AvaliableFood';
+import AvaliableFoods from './pages/AvailableFood/AvailableFood';
 import Register from './pages/register/Register';
 
 
-// const httpLink = createHttpLink({
-//   uri: 'http://localhost:3001/graphql',
+const httpLink = createHttpLink({
+  uri: 'http://localhost:3001/graphql',
 
 });
 

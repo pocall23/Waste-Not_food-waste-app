@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { useState } from 'react'
 import { useMutation } from '@apollo/client';
+import { Link } from 'react-router-dom'
 
 import Stack from '@mui/material/Stack';
 import TextField from '@mui/material/TextField';
@@ -13,20 +14,35 @@ import Box from '@mui/material/Box';
 import axios from 'axios';
 
 import { ADD_FOOD } from '../../utils/mutations';
+import { QUERY_FOODS } from '../../utils/queries';
+
+import Auth from '../../utils/auth'
 
 export default function FoodInputForm() {
   const [formState, setFormState] = useState({
     name: '',
+    donatedBy: '',
     description: '',
     servings: '',
     imageUrl:'',
-    public_id:'',
     ingredients:'',
     expiry: '',
 
   });
 
-  const [addFood, { error, data }] = useMutation(ADD_FOOD);
+  const [addFood, { error, data }] = useMutation(ADD_FOOD, {
+    update(cache, { data: { addFood }}) {
+      try {
+        const { foods } = cache.readQuery({query: QUERY_FOODS});
+        cache.writeQuery({
+          query: QUERY_FOODS,
+          data: { foods: [addFood, ...foods] },
+        })
+      } catch (e) {
+        console.error(e);
+      }
+    }
+  });
 
   const handleInputChange = (e) => {
     // console.log(e)
@@ -90,11 +106,14 @@ export default function FoodInputForm() {
 
     try {
       const { data } = await addFood({
-        variables: { ...formState },
+        variables: { 
+          ...formState,
+          donatedBy: Auth.getProfile().data.username,
+        },
       });
       console.log(data)
-      window.location.reload();
-      // Auth.login(data.addProfile.token);
+      setFormState('');
+      
     } catch (e) {
       console.error(e);
     }
@@ -102,7 +121,8 @@ export default function FoodInputForm() {
 
 
   return (
-   
+    <div>
+      {Auth.loggedIn() ? (
       <Box
       component="form" 
       action="" 
@@ -164,8 +184,6 @@ export default function FoodInputForm() {
 
         <input id="fileInput" type="file" onChange={handleInputImage} accept="image/*"/>
 
-        
-
         <br/>
 
           <LocalizationProvider dateAdapter={AdapterDateFns}>
@@ -190,7 +208,16 @@ export default function FoodInputForm() {
       </>
         
     </Box>
+   ):(
+    <p>
+          You need to be logged in to share your thoughts. Please{' '}
+          <Link to="/login">login</Link> or <Link to="/signup">signup.</Link>
+        </p>
+    )}
+    </div>
+   
   );
+
 }
 
 

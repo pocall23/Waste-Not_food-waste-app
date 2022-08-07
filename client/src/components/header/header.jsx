@@ -21,7 +21,7 @@ export default function Header() {
 
         </div>
         <button className="nav-toggle" >
-        <i class="fas fa-bars"></i>
+        <i className="fas fa-bars"></i>
         </button>
             <ul className="nav-menu nav-menu_visible">
               <li>
@@ -37,10 +37,10 @@ export default function Header() {
                 <a className="nav-menu-item nav-menu-link" href="#donations">Donations</a>
               </li>
               <li>
-                <a className="nav-menu-item nav-menu-link" href="#log-in">Log in</a>
+                <a className="nav-menu-item nav-menu-link" href="/login">Log in</a>
               </li>
               <li>
-                <a className="nav-menu-item nav-menu-link" href="#sing-up">Sign Up</a>
+                <a className="nav-menu-item nav-menu-link" href="/signup">Sign Up</a>
               </li>
             </ul>
           

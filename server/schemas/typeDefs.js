@@ -10,6 +10,8 @@ type Food {
   public_id: String
   ingredients: String
   expiry: String
+  createdAt: String
+  updatedAt: String
 }
 
 type Query {

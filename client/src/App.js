@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { ApolloClient, ApolloProvider, InMemoryCache, } from '@apollo/client';
+import { ApolloClient, ApolloProvider, InMemoryCache, useQuery, } from '@apollo/client';
 // import { createHttpLink } from '@apollo/client'
 // import { setContext } from '@apollo/client/link/context';
 
@@ -8,42 +8,23 @@ import { ApolloClient, ApolloProvider, InMemoryCache, } from '@apollo/client';
 
 
 import AvailableFoods from './pages/AvailableFood/AvailableFood';
-import Header from './components/Header/header';
-import Homepage from './pages/Homepage/Homepage';
+import Header from './components/Header/Header';
+import Homepage from './pages/homepage/Homepage';
 
 import SingleFood from './pages/SingleFood/SingleFood';
-
-
-// const httpLink = createHttpLink({
-//   uri: 'http://localhost:3001/graphql',
-
-// });
-
-// Construct request middleware that will attach the JWT token to every request as an `authorization` header
-// const authLink = setContext((_, { headers }) => {
-//   // get the authentication token from local storage if it exists
-//   const token = localStorage.getItem('id_token');
-//   // return the headers to the context so httpLink can read them
-//   return {
-//     headers: {
-//       ...headers,
-//       authorization: token ? `Bearer ${token}` : '',
-//     },
-//   };
-// });
-
-const client = new ApolloClient({
-  // Set up our client to execute the `authLink` middleware prior to making the request to our GraphQL API
-  // link: authLink.concat(httpLink),
-  uri: '/graphql',
-  cache: new InMemoryCache(),
-});
-
+import { QUERY_FOODS } from './utils/queries';
 
 
 function App() {
+  const { loading, error, data, refetch } = useQuery(QUERY_FOODS);
+
+
+  function refetchFoods(){
+    // trigger refetch data on graphql query
+    refetch();
+  }
+
   return (
-    <ApolloProvider client={client}>
       <Router>
         <div>
             <Header/>
@@ -55,18 +36,17 @@ function App() {
                 </Route>
                 <Route
                   path="/Foods"
-                  element={<AvailableFoods/>}>
+                  element={<AvailableFoods data={data} loading={loading} />}>
                 </Route>
                 <Route
                   path="/Food/:foodId"
-                  element={<SingleFood/>}>
+                  element={<SingleFood  onClickGrabFood={refetchFoods}/>}>
                 </Route>
               </Routes>
             </div>
             {/* need a footer here */}
         </div> 
       </Router>
-    </ApolloProvider>
   ) 
 }
 

@@ -78,7 +78,7 @@ const resolvers = {
           { _id: context.user._id },
           { $pull: { foods: food._id }}
         );
-        return thought
+        return food
       }
       throw new AuthenticationError('You need to be logged in!');
     },

@@ -1,7 +1,5 @@
 import "./header.css";
 
-
-
 export default function Header() {
   return (
     <>
@@ -15,7 +13,7 @@ export default function Header() {
                 className="title"
               />
             </a>
-          </div>``
+          </div>
         </div>
         <button className="nav-toggle" >
         <i class="fas fa-bars"></i>

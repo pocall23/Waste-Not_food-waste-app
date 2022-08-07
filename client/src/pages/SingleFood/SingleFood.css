@@ -67,3 +67,8 @@ a {
 .grab_button:hover {
   background-color: #5b824c;
 }
+
+.center {
+  text-align: center;
+  margin: 2%;
+}

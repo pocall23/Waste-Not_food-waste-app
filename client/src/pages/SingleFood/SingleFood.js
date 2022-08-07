@@ -5,6 +5,8 @@ import { QUERY_SINGLE_FOOD } from '../../utils/queries';
 import { REMOVE_FOOD } from '../../utils/mutations'
 import { Link, useParams } from 'react-router-dom';
 
+import Auth from '../../utils/auth'
+
 import './SingleFood.css'
 
 const SingleFood = (props) => {
@@ -64,6 +66,8 @@ const SingleFood = (props) => {
   }
 
   return (
+    <div className='center'>
+      {Auth.loggedIn() ? (
     <div className="card_container">
       <h2>
         {food.name}
@@ -99,6 +103,15 @@ const SingleFood = (props) => {
       </button>
       <button className='grab_button' onClick={ handleClick }> I'll grab this one! </button>
     </div>
+    ) : (
+    <p>
+          You need to be logged in to donate food. Please{' '}
+          <Link className='link' to="/login">login</Link> or <Link className='link' to="/signup">signup.</Link>
+        </p>
+    )
+    }
+    </div>
+    
   )
 }
 

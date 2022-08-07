@@ -12,8 +12,6 @@ import { DesktopDatePicker } from '@mui/x-date-pickers/DesktopDatePicker';
 import Box from '@mui/material/Box';
 
 
-import axios from 'axios';
-
 import { ADD_FOOD } from '../../utils/mutations';
 import { QUERY_FOODS } from '../../utils/queries';
 
@@ -22,7 +20,6 @@ import Auth from '../../utils/auth'
 export default function FoodInputForm() {
   const [formState, setFormState] = useState({
     name: '',
-    donatedBy: '',
     description: '',
     servings: '',
     imageUrl:'',
@@ -31,10 +28,11 @@ export default function FoodInputForm() {
 
   });
 
-  const [addFood, { error, data }] = useMutation(ADD_FOOD, {
+  const [addFood, { error }] = useMutation(ADD_FOOD, {
     update(cache, { data: { addFood }}) {
       try {
         const { foods } = cache.readQuery({query: QUERY_FOODS});
+        
         cache.writeQuery({
           query: QUERY_FOODS,
           data: { foods: [addFood, ...foods] },
@@ -98,27 +96,33 @@ export default function FoodInputForm() {
       ...formState,
       expiry: newValue
     })
-    console.log(newValue)
+    console.log(typeof newValue)
   };
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    console.log(formState);
+    
 
     try {
+      
+      console.log(Auth.getProfile().data.username)
       const { data } = await addFood({
         variables: { 
           ...formState,
           donatedBy: Auth.getProfile().data.username,
         },
+
       });
+
       console.log(data)
       setFormState('');
+      console.log(Auth.loggedIn())
       
     } catch (e) {
       console.error(e);
     }
   };
+
 
 
   return (
@@ -211,7 +215,7 @@ export default function FoodInputForm() {
     </Box>
    ):(
     <p>
-          You need to be logged in to share your thoughts. Please{' '}
+          You need to be logged in to donate food. Please{' '}
           <Link to="/login">login</Link> or <Link to="/signup">signup.</Link>
         </p>
     )}

@@ -1,4 +1,29 @@
-input {
+/* input {
   
   margin: 10px;
+} */
+
+.btn {
+  background-color: #87C872;
+  border-radius: 3px;
+  border: none;
+  padding: 5px 10px;
+  margin-left: 15px;
+  color: whitesmoke;
+
 }
+
+.choose {
+  margin-left: 15px;
+  border: none;
+  color: grey;
+}
+
+.btn:hover {
+background-color: #5b824c;
+color: #eef9e2;
+transition: 0.5s;
+font-weight: bold;
+}
+
+

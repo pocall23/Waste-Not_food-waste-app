@@ -11,6 +11,7 @@ import { AdapterMoment } from '@mui/x-date-pickers/AdapterMoment';
 import { DesktopDatePicker } from '@mui/x-date-pickers/DesktopDatePicker';
 import Box from '@mui/material/Box';
 
+import "./FoodInput.css";
 
 import { ADD_FOOD } from '../../utils/mutations';
 import { QUERY_FOODS } from '../../utils/queries';
@@ -187,8 +188,9 @@ export default function FoodInputForm() {
           onChange={handleInputChange}
         /> <br/>
 
-        <input id="fileInput" type="file" onChange={handleInputImage} accept="image/*"/>
 
+        <input className='choose' id="fileInput" type="file" onChange={handleInputImage} accept="image/*"/>
+        
         <br/>
 
           <LocalizationProvider dateAdapter={AdapterDateFns}>
@@ -204,7 +206,7 @@ export default function FoodInputForm() {
           </LocalizationProvider>
 
           <button
-            className="btn btn-block btn-info"
+            className="btn"
             style={{ cursor: 'pointer' }}
             type="submit"
             >

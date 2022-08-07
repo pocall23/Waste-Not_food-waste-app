@@ -1,5 +1,5 @@
 .card_container{
-  margin: 12.5%;
+  margin: 50px 200px ;
   background-color:whitesmoke;
   box-shadow: 0px 4px 8px lightgray;
   transition: 0.3s;
@@ -9,8 +9,9 @@
 }
 
 h2 {
-  color: #269792;
+  color: #87C872;
   margin: 10px;
+  text-transform: uppercase;
   
 }
 .box {
@@ -26,7 +27,7 @@ ul {
   flex: 1;
   width:30%;
   height:max-content;
-  background-color: #269792;
+  background-color: lightgray;
   margin: 10px;
   padding:10px;
 }
@@ -39,25 +40,30 @@ img {
   flex: 2;
   width: 50%;
   height:100%;
-  margin: 2px;
+  margin: 9px 10px 0px 0px;
   padding: 10px;
-  background-color: #F4C095;
-  color:rgb(84, 87, 87)
+  background-color: lightgray;
+  color:grey;
 }
 
 .grab_button {
-  position: relative;
-  left:40%;
+  background-color:#87C872;
+  position:relative;
+  left: 40%;
   padding: 10px;
   margin: 10px;
   width: 22%;
-  background-image: radial-gradient(#269792, #1D7874);
-  border: #F4C095;
-  color:#F4C095;
+  border: none;
+  color:whitesmoke;
   font-weight: bold;
+  border-radius: 3px;
 }
 
 a {
-  color:#F4C095;
+  color:whitesmoke;
   text-decoration: none;
+}
+
+.grab_button:hover {
+  background-color: #5b824c;
 }

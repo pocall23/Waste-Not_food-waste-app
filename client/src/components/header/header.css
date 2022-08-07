@@ -1,8 +1,18 @@
-.header-container{
-    height: 50px;
-    /* width: 100%; */
+.container {
+background-color: #eef9e2;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+align-items: center;
+position:sticky;
+top:0;
+}
+
+/* .header-container{
+    height: 150px;
+    width: 100%;
     color:#F4C095;
-    background-image: radial-gradient(#269792, #1D7874) ;
+    background-color: #2f5500 ;
     display: flex;
     align-items: center;
     position: sticky;
@@ -10,19 +20,91 @@
     padding: 50px 20px;
     justify-content: space-between;
 
+} */
+.nav-menu {
+display: flex;
+justify-content: space-between;
+margin-right:100px;
 }
-.title{
-    font-size: 58px;
-    padding-left: 10px;
-    max-width: 200;
+
+.picture img {
+    width: 200px;
+    margin-left: 100px;
+    margin-top: 5px;
+    margin-bottom: 10px;
 }
-.navbar ul{
-    display: inline-flex;
-    font-size: 24px;
-   
+li {
+font-size: 20px;
+margin: 0px 30px;
+text-transform: uppercase;
 }
-.navbar ul .nav{
-    /* padding-right: 5%; */
-    margin: 5%;
-    text-decoration: none;
+
+.nav-menu-item {
+color: #87C872;
+font-weight: bold;
+}
+.nav-menu-link{
+    padding: 8px 12px;
+    border-radius: 3px;
+    
+}
+
+.nav-menu-link:hover {
+background-color: #87C872;
+color: #eef9e2;
+transition: 0.5s;
+}
+
+.nav-toggle {
+    color: white;
+    background: none;
+    border: none;
+    font-size: 25px;
+    display: none;
+
+    
+}
+
+
+@media (max-width: 768px) {
+    .nav-menu {
+        flex-direction: column;
+        align-items: center;
+        margin-right:20px;
+        color: white;
+        background-color: #87C872;
+        position: fixed;
+        left: 0;
+        top: 200px;
+        width: 100%;
+        padding: 20px 0;
+
+        height: calc(100% -200px);
+        overflow-y: auto;
+ 
+        left: 100%;
+        transition: left 0.3s;
+        
+        }
+
+        .nav-menu-item {
+            color: white;
+            font-size: 15px;
+            font-weight: bold;
+            }
+
+            .nav-menu-link:hover {
+                background: none;
+                color: #263424;
+                transition: 0.5s;
+                }
+
+                .nav-toggle {
+                    display: block;
+                    padding-right: 70px;
+                }
+
+                .nav-menu_visible {
+                left: 0;
+                }
 }

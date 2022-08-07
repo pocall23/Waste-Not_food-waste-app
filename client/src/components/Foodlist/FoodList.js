@@ -23,7 +23,9 @@ function FoodList({
   }
   return (
     <div className="flex-column justify-space-between my-4">
-      {showTitle && <h3 className="heading">{title}</h3>}
+
+      <h3 className="heading">Donations</h3>
+
       
         
         {foods && foods.map((food)=> (
@@ -47,8 +49,10 @@ function FoodList({
                   <FavoriteIcon />
                 </IconButton> */}
                 <Button size="small">
-                  <Link to={`/Food/${food._id}`}>
+
+                  <Link className="moreinfo" to={`/Food/${food._id}`}>
                   More info about this food
+
                   </Link>
                 </Button>
               </CardActions>

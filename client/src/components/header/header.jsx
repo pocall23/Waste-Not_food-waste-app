@@ -1,8 +1,12 @@
-import "./header.css";
+
+import React from "react"
+import { Link } from 'react-router-dom';
+import "./header.css"
 
 export default function Header() {
   return (
     <>
+
       <div className="container">
         <div className="container">
           <div className="">
@@ -14,6 +18,7 @@ export default function Header() {
               />
             </a>
           </div>
+
         </div>
         <button className="nav-toggle" >
         <i class="fas fa-bars"></i>

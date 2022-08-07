@@ -7,7 +7,7 @@ export default function SignUp() {
 
   return (
     <>
-      <Link className="button" to = {`/Foods`}><button>SIGN UP!</button></Link>
+      <Link className="button" to = {`/Signup`}><button>SIGN UP!</button></Link>
     </>
   )
 }

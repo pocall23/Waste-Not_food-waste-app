@@ -1,6 +1,7 @@
 [
   {
     "name": "Can tomatoes",
+    "donatedBy": "Brian Kernighan",
     "description": "Tomatoes in juice",
     "imageUrl": "https://res.cloudinary.com/dqw6fjffy/image/upload/v1659434347/Can_Tomatoes_tisizj.png",
     "servings": 3,
@@ -9,8 +10,8 @@
   },
   {
     "name": "Spagetti Bolognese",
+    "donatedBy": "David Thomas",
     "description": "Homemade Spagetti Bolognese",
-
     "imageUrl": "https://res.cloudinary.com/dqw6fjffy/image/upload/v1659434403/Spagetti_Bolognese_b9eaqe.png",
     "servings": 4,
     "ingredients": "Mince, Olive Oil, Onion, Garlic, Can Tomatoes, Tomato Paste, Salt, Basil, Oregano, Tabasco",

@@ -4,15 +4,18 @@ import { Link } from 'react-router-dom';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
-import { CardMedia, IconButton } from "@mui/material";
-import FavoriteIcon from '@mui/icons-material/Favorite';
+import { CardMedia } from "@mui/material";
 import CardHeader from '@mui/material/CardHeader';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 
 import './FoodList.css'
 
-function FoodList({ foods, title }) {
+function FoodList({ 
+  foods, 
+  title,
+  showTitle = true,
+  showUsername = true }) {
   
   if (!foods.length) {
     console.log(foods)
@@ -20,12 +23,12 @@ function FoodList({ foods, title }) {
   }
   return (
     <div className="flex-column justify-space-between my-4">
-      <h3 className="heading">{title}</h3>
+      {showTitle && <h3 className="heading">{title}</h3>}
       
         
         {foods && foods.map((food)=> (
           <div key={food._id}>
-          <Card  sx={{ maxWidth: 500, mx: "auto" }}>
+          <Card  sx={{ maxWidth: 200, mx: "auto" }}>
             <CardHeader title={food.name}>
             </CardHeader>
             <CardMedia
@@ -40,12 +43,12 @@ function FoodList({ foods, title }) {
               </Typography>
               
               <CardActions disableSpacing>
-                <IconButton aria-label="add to favorites">
+                {/* <IconButton aria-label="add to favorites">
                   <FavoriteIcon />
-                </IconButton>
+                </IconButton> */}
                 <Button size="small">
                   <Link to={`/Food/${food._id}`}>
-                  More info
+                  More info about this food
                   </Link>
                 </Button>
               </CardActions>

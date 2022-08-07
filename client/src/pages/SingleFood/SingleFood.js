@@ -52,10 +52,10 @@ const SingleFood = (props) => {
   if (!Available) {
     return (
       <div className="card_container">
-        <h2> The food was purchased and is no longer avaliable</h2>
+        <h2> The food was purchased and is no longer available</h2>
         <button className='grab_button' > 
           <Link  to={`/Foods`}>
-            Return to able Available Foods page
+          Return to the donations page.
           </Link> 
         </button>
 
@@ -93,7 +93,7 @@ const SingleFood = (props) => {
       </div>
       <button className='grab_button'> 
         <Link to={`/Foods`}>
-          Return to Avilable Foods page
+          Return to the donations page.
         </Link> 
          
       </button>

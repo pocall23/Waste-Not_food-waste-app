@@ -1,22 +1,48 @@
-import "./header.css"
+import "./header.css";
+
 
 
 export default function Header() {
   return (
     <>
-    <div className="header-container">
-            <div className="header-left">
-            <div className="title">WASTE NOT!</div>
+      <div className="container">
+        <div className="container">
+          <div className="">
+            <a className="picture" href="">
+              <img
+                src="https://res.cloudinary.com/dqw6fjffy/image/upload/v1659754149/waste_not_suepl3.png"
+                alt="logo image"
+                className="title"
+              />
+            </a>
+          </div>``
         </div>
-        <div className="header-centre">
-            <div className="navbar">
-                <ul>
-                    <span className="nav">login</span>
-                    <span className="nav">FAQ</span>
-                </ul>
-            </div>
+        <button className="nav-toggle" >
+        <i class="fas fa-bars"></i>
+        </button>
+            <ul className="nav-menu nav-menu_visible">
+              <li>
+                <a className="nav-menu-item nav-menu-link" href="/">Home</a>
+              </li>
+              <li>
+                <a className="nav-menu-item nav-menu-link" href="#what-we-do">What We Do</a>
+              </li>
+              <li>
+                <a className="nav-menu-item nav-menu-link" href="/foods">Feed</a>
+              </li>
+              <li>
+                <a className="nav-menu-item nav-menu-link" href="#donations">Donations</a>
+              </li>
+              <li>
+                <a className="nav-menu-item nav-menu-link" href="#log-in">Log in</a>
+              </li>
+              <li>
+                <a className="nav-menu-item nav-menu-link" href="#sing-up">Sign Up</a>
+              </li>
+            </ul>
+          
         </div>
-        </div>
-        </>
-  )
+      
+    </>
+  );
 }

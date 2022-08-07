@@ -12,7 +12,7 @@ const AvaliableFoods = (props) => {
   console.log(foods)
   
   return (
-    <div className="container">
+    <div className="container1">
       <div className="foodlist">
           {props.loading ? (
             <div>Loading...</div>
@@ -24,7 +24,7 @@ const AvaliableFoods = (props) => {
           )}
         </div>
         <div className="foodform">
-          <h2 className='donateheading'>Add a new food to donate</h2>
+          <h2 className='donateheading'>Add a new donation</h2>
           <FoodInputForm/>
           
         </div>

@@ -14,7 +14,6 @@ import Homepage from './pages/homepage/Homepage';
 import SingleFood from './pages/SingleFood/SingleFood';
 import { QUERY_FOODS } from './utils/queries';
 
-
 function App() {
   const { loading, error, data, refetch } = useQuery(QUERY_FOODS);
 

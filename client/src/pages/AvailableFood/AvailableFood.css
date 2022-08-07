@@ -1,4 +1,4 @@
-.container {
+.container1 {
   background-color:whitesmoke;
   display: flex;
 }
@@ -7,7 +7,6 @@
   width: 80%;
   margin: 5%;
   
-
 }
 .foodform {
   flex: 1;
@@ -23,9 +22,9 @@
   padding: 20px;
   margin: 20px;
   width: 200px;
-  background-image: radial-gradient(#269792, #1D7874);
-  border: #F4C095;
-  color:#F4C095;
+  
+  border: white;
+  color:white;
   font-size: 16px;
   border-radius: 5px;
 }

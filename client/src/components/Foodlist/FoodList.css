@@ -1,6 +1,13 @@
 .heading {
  
   font-size: 50px;
-  color: #269792;
+  color: #87C872;
   text-align: center;
+  text-transform: uppercase;
+  font-family: roboto;
+  padding-bottom: 15px;
+}
+
+.moreinfo {
+  color: #87C872;
 }

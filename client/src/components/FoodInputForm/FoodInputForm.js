@@ -127,13 +127,13 @@ export default function FoodInputForm() {
 
 
   return (
-    <div>
+    <div className='box'>
       {Auth.loggedIn() ? (
       <Box
       component="form" 
-      action="" 
+      // action="" 
       method="POST" 
-      enctype="multipart/form-data"
+      // enctype="multipart/form-data"
       sx={{
         '& .MuiTextField-root': { m: 2, MaxWidth: '50ch' },
       }}
@@ -145,7 +145,7 @@ export default function FoodInputForm() {
 
        <TextField
           required
-          // value={formState.name}
+      
           name="name"
           id="outlined-required"
           label="Food Name"
@@ -216,9 +216,9 @@ export default function FoodInputForm() {
         
     </Box>
    ):(
-    <p>
+      <p>
           You need to be logged in to donate food. Please{' '}
-          <Link to="/login">login</Link> or <Link to="/signup">signup.</Link>
+          <Link className='link' to="/login">login</Link> or <Link className='link' to="/signup">signup.</Link>
         </p>
     )}
     </div>

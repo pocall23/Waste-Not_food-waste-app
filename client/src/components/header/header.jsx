@@ -1,3 +1,5 @@
+import React from "react"
+import { Link } from 'react-router-dom';
 import "./header.css"
 
 
@@ -11,8 +13,12 @@ export default function Header() {
         <div className="header-centre">
             <div className="navbar">
                 <ul>
-                    <span className="nav">login</span>
-                    <span className="nav">FAQ</span>
+                    <span className="nav">
+                        <Link to="/Login">login</Link>
+                    </span>
+                    <span className="nav">
+                        <Link to="/FAQ">FAQ</Link>
+                    </span>
                 </ul>
             </div>
         </div>

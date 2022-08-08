@@ -6,9 +6,8 @@ import "./header.css"
 export default function Header() {
   return (
     <>
-
-      <div className="container">
-        <div className="container">
+      <div className="container container2">
+        <div className="container container2">
           <div className="">
             <a className="picture" href="">
               <img
@@ -20,15 +19,15 @@ export default function Header() {
           </div>
 
         </div>
-        <button className="nav-toggle" >
-        <i className="fas fa-bars"></i>
-        </button>
+        <label for="toggle">&#9776;</label>
+        <input type="checkbox" id="toggle" />
             <ul className="nav-menu nav-menu_visible">
+              
               <li>
-                <a className="nav-menu-item nav-menu-link" href="/">Home</a>
+                <a className="nav-menu-item nav-menu-link .nav-menu-link_active" href="/">Home</a>
               </li>
               <li>
-                <a className="nav-menu-item nav-menu-link" href="#what-we-do">What We Do</a>
+                <a className="nav-menu-item nav-menu-link" href="#what-we-do">About</a>
               </li>
               <li>
                 <a className="nav-menu-item nav-menu-link" href="/foods">Feed</a>
@@ -43,7 +42,7 @@ export default function Header() {
                 <a className="nav-menu-item nav-menu-link" href="/signup">Sign Up</a>
               </li>
             </ul>
-          
+
         </div>
       
     </>

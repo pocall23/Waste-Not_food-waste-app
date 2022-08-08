@@ -1,7 +1,5 @@
-import About from "../../components/about/about";
-import Help from "../../components/help/help";
-import SignUp from "../../components/signUp/signUp";
 
+import React from 'react';
 import "./Homepage.css";
 
 export default function Homepage() {

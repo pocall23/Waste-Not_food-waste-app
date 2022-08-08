@@ -27,7 +27,7 @@ export default function Header() {
                 <a className="nav-menu-item nav-menu-link .nav-menu-link_active" href="/">Home</a>
               </li>
               <li>
-                <a className="nav-menu-item nav-menu-link" href="#what-we-do">About</a>
+                <a className="nav-menu-item nav-menu-link" href="/about">About</a>
               </li>
               <li>
                 <a className="nav-menu-item nav-menu-link" href="/foods">Feed</a>

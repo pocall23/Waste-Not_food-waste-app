@@ -35,6 +35,14 @@ width: 100%;
 
 }
 
+.rowthing {
+display:inline;
+}
+
+.iconito {
+  font-size: 100px;
+}
+
 @keyframes change {
     0% {margin-left: 0%;}
     20% {margin-left: 0%;}

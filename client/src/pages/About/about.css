@@ -1,0 +1,27 @@
+.about-container{
+    background-image: url('../../../public/images/food-waste-about.jpg');
+    background-repeat: none;
+    background-size: cover;
+    padding-bottom: 20rem;
+}
+.about-title{
+    padding-bottom: 12rem;
+}
+hr{
+    background-color:#508f3b; 
+    margin-bottom:2em;
+}
+.about-text{ 
+    color:#508f3b;
+    display: flex;
+    flex-direction: column;
+    background-color: #eef9e2ee;
+    justify-content: center;
+    text-align: center;
+    padding: 5rem 3rem;
+    margin: 0 20rem;
+    -webkit-box-shadow: -2px 2px 2px 1px rgba(176,176,176,0.5); 
+    box-shadow: -2px 2px 2px 1px rgba(176,176,176,0.5);
+    border-radius: 2px;
+    
+}

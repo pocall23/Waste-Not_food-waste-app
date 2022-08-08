@@ -26,3 +26,21 @@ hr{
     
 }
 
+@media (max-width: 768px) {}
+.about-text{ 
+    color:#508f3b;
+    display: flex;
+    flex-direction: column;
+    background-color: #eef9e2ee;
+    justify-content: center;
+    text-align: center;
+    padding: 20rem 40rem;
+    margin: 0 20rem;
+    -webkit-box-shadow: -2px 2px 2px 1px rgba(176,176,176,0.5); 
+    box-shadow: -2px 2px 2px 1px rgba(176,176,176,0.5);
+    border-radius: 2px;
+}
+
+@media (max-width: 576px) {
+    
+}

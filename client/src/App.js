@@ -1,8 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-
-
 import AvailableFoods from './pages/AvailableFood/AvailableFood';
 import Header from './components/Header/Header';
 import Homepage from './pages/Homepage/Homepage';

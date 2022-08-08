@@ -6,11 +6,10 @@ import "./header.css"
 export default function Header() {
   return (
     <>
-
-      <div className="container">
-        <div className="container">
+      <div className="container container2">
+        <div className="container container2">
           <div className="">
-            <a className="picture" href="">
+            <a className="picture">
               <img
                 src="https://res.cloudinary.com/dqw6fjffy/image/upload/v1659754149/waste_not_suepl3.png"
                 alt="logo image"
@@ -20,12 +19,12 @@ export default function Header() {
           </div>
 
         </div>
-        <button className="nav-toggle" >
-        <i className="fas fa-bars"></i>
-        </button>
+        <label for="toggle">&#9776;</label>
+        <input type="checkbox" id="toggle" />
             <ul className="nav-menu nav-menu_visible">
+              
               <li>
-                <a className="nav-menu-item nav-menu-link" href="/">Home</a>
+                <a className="nav-menu-item nav-menu-link .nav-menu-link_active" href="/">Home</a>
               </li>
               <li>
                 <a className="nav-menu-item nav-menu-link" href="/about">About</a>
@@ -43,7 +42,7 @@ export default function Header() {
                 <a className="nav-menu-item nav-menu-link" href="/signup">Sign Up</a>
               </li>
             </ul>
-          
+
         </div>
       
     </>

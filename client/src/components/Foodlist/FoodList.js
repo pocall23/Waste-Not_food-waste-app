@@ -22,7 +22,7 @@ function FoodList({
     return <h3 className="heading">No Foods avaliable</h3>
   }
   return (
-    <div className="flex-column justify-space-between my-4">
+    <div className="flex-column justify-space-between my-4 hide">
 
       <h3 className="heading">Donations</h3>
 

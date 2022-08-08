@@ -1,10 +1,12 @@
 .card {
-  justify-content: space-between;
+  justify-content: center;
   margin: auto;
-  width:80%;
+  width:50%;
   background-color: whitesmoke;
   padding: 5%;
-  margin-top: 2%;
+  margin-top: 5%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
 }
 .card-header {
@@ -17,5 +19,17 @@ input {
   width: 80%;
   height: 30px;
   margin-top: 2%;
+
+}
+
+@media (max-width: 576px) {
+  .btn {
+    width: 30%;
+    height: 30px;
+    margin-top: 3%;
+    padding: 0;
+    margin-left: 0;
+  
+  }
 
 }

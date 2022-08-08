@@ -34,6 +34,13 @@ right: 0;
     display:flex;
     flex-direction: column;
 }
+.contact a{
+    margin-right: 10em;
+    color:#508f3b;
+}
+.contact{
+    padding-right: 5em;
+}
 }
 @media only screen and (max-width:900px ){
     .copyright{
@@ -43,6 +50,36 @@ right: 0;
     .footer-container{
     display:flex;
     flex-direction: column;
+}
+.contact{
+    padding-right: 3em;
+    align-items: center;
+}
+.contact a{
+    display: flex;
+    flex-direction: column;
+    margin-right: 2em;
+    color:#508f3b;
+}
+}
+@media only screen and (max-width:500px ){
+    .copyright{
+        margin-right: 15em;
+        text-align: center;
+    }
+    .footer-container{
+    display:flex;
+    flex-direction: column;
+}.contact{
+    padding-right: 5em;
+    align-items: center;
+}
+.contact a{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-right: 2em;
+    color:#508f3b;
 }
 }
 

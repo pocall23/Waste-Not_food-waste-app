@@ -9,7 +9,7 @@ export default function Header() {
       <div className="container container2">
         <div className="container container2">
           <div className="">
-            <a className="picture" href="">
+            <a className="picture">
               <img
                 src="https://res.cloudinary.com/dqw6fjffy/image/upload/v1659754149/waste_not_suepl3.png"
                 alt="logo image"

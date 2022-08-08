@@ -26,4 +26,23 @@ right: 0;
 }
 
 
+@media only screen and (max-width:700px ){
+    .copyright{
+        text-align: center;
+    }
+    .footer-container{
+    display:flex;
+    flex-direction: column;
+}
+}
+@media only screen and (max-width:900px ){
+    .copyright{
+        margin-right: 15em;
+        text-align: center;
+    }
+    .footer-container{
+    display:flex;
+    flex-direction: column;
+}
+}
 

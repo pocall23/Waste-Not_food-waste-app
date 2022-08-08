@@ -1,10 +1,10 @@
 .card_container{
-  margin: 50px 200px ;
+  margin: 50px 30% ;
   background-color:whitesmoke;
   box-shadow: 0px 4px 8px lightgray;
   transition: 0.3s;
-  height: 100%;
-  width: 75%;
+  height: 50%;
+  width: 40%;
   padding: 5px;
 }
 
@@ -15,7 +15,9 @@ h2 {
   
 }
 .box {
-  display: flex;
+  display: block;
+  align-items: center;
+  justify-content: center;
 }
 
 ul {
@@ -24,35 +26,34 @@ ul {
 }
 
 .image_box {
-  flex: 1;
-  width:30%;
+  width:90%;
   height:max-content;
-  background-color: lightgray;
+  
   margin: 10px;
   padding:10px;
 }
 
 img {
-  width:fit-content;
-  height: fit-content;
+  width:90%;
+
 }
+
 .info_box {
-  flex: 2;
-  width: 50%;
-  height:100%;
-  margin: 9px 10px 0px 0px;
+  width: 90%;
+  /* height:100%; */
+  margin: 10px;
   padding: 10px;
-  background-color: lightgray;
+  
   color:grey;
 }
 
 .grab_button {
   background-color:#87C872;
   position:relative;
-  left: 40%;
+  
   padding: 10px;
   margin: 10px;
-  width: 22%;
+ 
   border: none;
   color:whitesmoke;
   font-weight: bold;
@@ -71,4 +72,72 @@ a {
 .center {
   text-align: center;
   margin: 2%;
+}
+
+@media (max-width: 576px) {
+
+  .card_container{
+    margin: 50px 15% ;
+    background-color:whitesmoke;
+    box-shadow: 0px 4px 8px lightgray;
+    transition: 0.3s;
+    width: 70%;
+  }
+
+  .image_box {
+    width:90%;
+    margin-top: 20px;
+    padding:0;
+    margin: 0;
+  }
+  
+  img {
+    width:90%;
+  
+  }
+  
+  .info_box {
+    width: 90%;
+    margin: 0;
+    padding: 0;
+    color:grey;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .card_container{
+    margin: 50px 15% ;
+    background-color:whitesmoke;
+    box-shadow: 0px 4px 8px lightgray;
+    transition: 0.3s;
+    width: 70%;
+  }
+
+  .image_box {
+    width:90%;
+    margin-left: 20px;
+   
+    
+    margin-top: 20px;
+    padding:0;
+  }
+  
+  img {
+    width:100%;
+    padding: 0;
+    margin: 0;
+  
+  }
+  
+  .info_box {
+    width: 90%;
+    /* height:100%; */
+    margin-left: 20px;
+    padding: 0;
+    
+    color:grey;
+  }
+
 }

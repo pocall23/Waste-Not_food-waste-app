@@ -30,7 +30,7 @@ function FoodList({
         
         {foods && foods.map((food)=> (
           <div key={food._id}>
-          <Card  sx={{ maxWidth: 200, mx: "auto" }}>
+          <Card  sx={{ maxWidth: 300, mx: "auto", }}>
             <CardHeader title={food.name}>
             </CardHeader>
             <CardMedia

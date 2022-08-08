@@ -1,8 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-
-
 import AvailableFoods from './pages/AvailableFood/AvailableFood';
 import Header from './components/Header/Header';
 import Homepage from './pages/Homepage/Homepage';
@@ -11,7 +9,6 @@ import About from './pages/About/About'
 import Signup from './pages/Signup/Signup';
 import Login from './pages/Login/Login';
 import Footer from './components/Footer/Footer'
-import FequentlyAskedQuestions from './pages/FequentlyAskedQuestions/FequentlyAskedQuestions'
 import { useQuery } from '@apollo/client';
 import { QUERY_FOODS } from './utils/queries';
 
@@ -47,10 +44,6 @@ function App() {
                 element={<About />}>
                   </Route>
                 <Route
-                  path="/frequentlyAskedQuestions"
-                  element={<FequentlyAskedQuestions/>}>
-                </Route>
-                <Route
                   path="/foods"
                   element={<AvailableFoods data={data} loading={loading}/>}>
                 </Route>
@@ -60,7 +53,6 @@ function App() {
                 </Route>
               </Routes>
             </div>
-            <Footer/>
         </div> 
       </Router>
   ) 

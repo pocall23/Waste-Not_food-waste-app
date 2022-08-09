@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.ae77a966.css",
-    "main.js": "/static/js/main.c65d8a33.js",
+    "main.css": "/static/css/main.106b9d1b.css",
+    "main.js": "/static/js/main.e26bcfc3.js",
     "static/media/food-waste-about.jpg": "/static/media/food-waste-about.b437635521fb9930cb3a.jpg",
     "index.html": "/index.html",
-    "main.ae77a966.css.map": "/static/css/main.ae77a966.css.map",
-    "main.c65d8a33.js.map": "/static/js/main.c65d8a33.js.map"
+    "main.106b9d1b.css.map": "/static/css/main.106b9d1b.css.map",
+    "main.e26bcfc3.js.map": "/static/js/main.e26bcfc3.js.map"
   },
   "entrypoints": [
-    "static/css/main.ae77a966.css",
-    "static/js/main.c65d8a33.js"
+    "static/css/main.106b9d1b.css",
+    "static/js/main.e26bcfc3.js"
   ]
 }

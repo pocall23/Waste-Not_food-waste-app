@@ -40,6 +40,8 @@ As a user I want to be able to log in again easily
 ## Room for improvement
 The app does need a feature that allows users to add their location.
 
+## Link
+[Waste Not!](https://wastenot4pp.herokuapp.com/)
 
 ## Contact
 [Kylie Gilbert](https://github.com/kyliegilbert)
